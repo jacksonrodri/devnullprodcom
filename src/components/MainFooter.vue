@@ -1,9 +1,11 @@
 <template>
-  <b-row no-gutters id="main_footer">
-    <b-col>
-      <div>(C) 2018-2020 Dev Null Productions LLC. All Rights Reserved</div>
-    </b-col>
-  </b-row>
+  <div id="main_footer">
+    <span>(C) 2018-2020 Dev Null Productions LLC. All Rights Reserved |</span>
+
+    <a href="https://twitter.com/DevNullProd">
+      <img src="../assets/twitter.png" />
+    </a>
+  </div>
 </template>
 
 <script>

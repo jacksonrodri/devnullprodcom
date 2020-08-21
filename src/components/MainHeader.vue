@@ -7,8 +7,35 @@
     <nav id="nav">
       <ul>
         <li><router-link to="/">Home</router-link></li>
-        <li>Products</li>
+
+        <li>
+          <b-dropdown id="products">
+            <template v-slot:button-content>
+              Products
+            </template>
+
+            <b-dropdown-item>
+              <router-link to="/products/tracker">
+                Blockchain Tracker
+              </router-link>
+            </b-dropdown-item>
+
+            <b-dropdown-item>
+              <router-link to="/products/dex">
+                DEX Intel
+              </router-link>
+            </b-dropdown-item>
+
+            <b-dropdown-item>
+              <router-link to="/products/city">
+                Ledger City
+              </router-link>
+            </b-dropdown-item>
+          </b-dropdown>
+        </li>
+
         <li><router-link to="/blog">Blog</router-link>
+
         <li><router-link to="/about">About Us</router-link></li>
       </ul>
     </nav>
@@ -64,5 +91,19 @@ export default {
 #nav a{
   color: white;
   text-decoration: none;
+}
+</style>
+
+<style>
+#products .btn{
+  padding: 0;
+  padding-bottom: 5px;
+  background-color: unset;
+  border: none;
+  box-shadow: none;
+}
+
+#products a{
+  color: black !important;
 }
 </style>

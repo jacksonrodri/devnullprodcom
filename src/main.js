@@ -17,17 +17,21 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 import Landing     from './Landing.vue'
-import XrpIntel    from './XrpIntel.vue'
-import ZerpTracker from './ZerpTracker.vue'
 import About       from './About.vue'
 import Blog        from './Blog.vue'
 
+import DexIntel    from './DexIntel.vue'
+import BlkTracker  from './BlkTracker.vue'
+import LedgerCity  from './LedgerCity.vue'
+
 const routes = [
   { path: '/',            component: Landing     },
-  { path: '/xrpintel',    component: XrpIntel    },
-  { path: '/zerptracker', component: ZerpTracker },
   { path: '/about',       component: About       },
   { path: '/blog',        component: Blog        },
+
+  { path: '/products/dex',     component: DexIntel    },
+  { path: '/products/tracker', component: BlkTracker  },
+  { path: '/products/city',    component: LedgerCity  },
 ]
 
 const router = new VueRouter({
