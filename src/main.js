@@ -18,25 +18,45 @@ Vue.use(VueRouter)
 
 import Landing     from './Landing.vue'
 import About       from './About.vue'
+
 import Blog        from './Blog.vue'
+import Post        from './Post.vue'
+import Posts       from './assets/posts'
 
 import DexIntel    from './DexIntel.vue'
 import BlkTracker  from './BlkTracker.vue'
 import LedgerCity  from './LedgerCity.vue'
 
-const routes = [
-  { path: '/',            component: Landing     },
-  { path: '/about',       component: About       },
-  { path: '/blog',        component: Blog        },
+const posts =
+  Posts.map(function(entry){
+    return {
+      path: entry.path,
+      component: () => import(`./posts/${entry.path}.md`)
+    }
+  })
 
-  { path: '/products/dex',     component: DexIntel    },
-  { path: '/products/tracker', component: BlkTracker  },
-  { path: '/products/city',    component: LedgerCity  },
+const routes = [
+  { path: '/',       component: Landing },
+  { path: '/about',  component: About   },
+
+  { path: '/blog',   component: Blog    },
+  { path: '/post',   component: Post,
+                     children : posts   },
+
+  { path: '/products/dex',     component: DexIntel   },
+  { path: '/products/tracker', component: BlkTracker },
+  { path: '/products/city',    component: LedgerCity },
 ]
 
 const router = new VueRouter({
   mode : "history",
-  routes : routes
+  routes : routes,
+
+  scrollBehavior (to) {
+    if(to.hash)
+      return {selector: to.hash}
+    return { x: 0, y: 0 }
+  }
 })
 
 new Vue({

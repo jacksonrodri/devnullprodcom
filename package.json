@@ -11,8 +11,10 @@
     "bootstrap-vue": "^2.15.0",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
+    "vue-markdown-loader": "^2.4.1",
     "vue-mq": "^1.0.1",
-    "vue-router": "^3.3.4"
+    "vue-router": "^3.3.4",
+    "vue-tweet-embed": "^2.4.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.4.0",
