@@ -142,3 +142,15 @@ export default {
   align-items: center;
 }
 </style>
+
+<style>
+#post_container h1,
+#post_container h2{
+  margin-top: 25px;
+}
+
+#post_container img{
+  max-width: 100%;
+  padding: 25px;
+}
+</style>
