@@ -63,7 +63,7 @@ Finally the following is a list of some interesting articles &amp; news stories 
 - [Brad Garlinghouse from Davos: IPO a natural evolution for Ripple](https://www.xrparcade.com/news/brad-garlinghouse-from-davos-ipo-a-natural-evolution-for-ripple/)
 - [XRPTipBot Twitter account suspended, developer finds solution #xrptip](https://www.xrparcade.com/news/xrptipbot-twitter-account-suspended-developer-finds-solution-xrptip/)
 - [SBI Holdings will offer XRP as a benefit to shareholders](https://www.xrparcade.com/news/sbi-holdings-will-offer-xrp-as-a-benefit-to-shareholders/)
-- [Xpring is listening](https://www.xrparcade.com/news/xpring-is-listening/
+- [Xpring is listening](https://www.xrparcade.com/news/xpring-is-listening/)
 - [Patent infringement case against Ripple dismissed](https://www.xrparcade.com/news/patent-infringement-case-dismissed/)
 - [Ripple’s BitPay partnership pays dividends: XRP now available to 100,000 retailers](https://www.xrparcade.com/news/ripples-bitpay-partnership-pays-dividends-xrp-now-available-to-100000-retailers/)
 - [Chainalysis adds support for XRP](https://www.xrparcade.com/news/chainalysis-adds-support-for-xrp/)
