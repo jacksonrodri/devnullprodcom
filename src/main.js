@@ -25,7 +25,6 @@ import Posts       from './assets/posts'
 
 import DexIntel    from './DexIntel.vue'
 import BlkTracker  from './BlkTracker.vue'
-import LedgerCity  from './LedgerCity.vue'
 
 const posts =
   Posts.map(function(entry){
@@ -44,8 +43,7 @@ const routes = [
                      children : posts   },
 
   { path: '/products/dex',     component: DexIntel   },
-  { path: '/products/tracker', component: BlkTracker },
-  { path: '/products/city',    component: LedgerCity },
+  { path: '/products/tracker', component: BlkTracker }
 ]
 
 const router = new VueRouter({

@@ -25,12 +25,6 @@
                 DEX Intel
               </router-link>
             </b-dropdown-item>
-
-            <b-dropdown-item>
-              <router-link to="/products/city">
-                Ledger City
-              </router-link>
-            </b-dropdown-item>
           </b-dropdown>
         </li>
 
