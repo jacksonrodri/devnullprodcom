@@ -14,7 +14,7 @@
       </div>
     </div>
 
-    <div id="partners_wrapper">
+    <!--<div id="partners_wrapper">
       <div id="partners_title_wrapper">
         <h1>Partners</h1>
       </div>
@@ -28,7 +28,7 @@
           <a href="https://coventure.vc"><img src="./assets/partners/coventure.png" /></a>
         </div>
       </div>
-    </div>
+    </div>-->
   </MainLayout>
 </template>
 

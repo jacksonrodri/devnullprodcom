@@ -10,7 +10,7 @@
         <p><a href="mailto:devnullproductions@gmail.com">Contact us</a> for a quote on your project today!</p>
       </div>
 
-      <div id="team_title_wrapper">
+      <!--<div id="team_title_wrapper">
         <h1>Our Team</h1>
       </div>
 
@@ -46,20 +46,20 @@
             </b-col>
           </b-row>
         </b-container>
-      </div>
+      </div>-->
     </div>
   </MainLayout>
 </template>
 
 <script>
 import MainLayout from './components/MainLayout'
-import TeamMember from './components/TeamMember'
+//import TeamMember from './components/TeamMember'
 
 export default {
   name: 'About',
   components: {
     MainLayout,
-    TeamMember
+    //TeamMember
   }
 }
 </script>
