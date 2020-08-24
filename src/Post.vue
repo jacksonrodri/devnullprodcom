@@ -18,7 +18,7 @@
         <hr/>
 
         <div id="share">
-          <div><b>Share this Post:</b></div>
+          <div id="share_this_post"><b>Share this Post:</b></div>
           <div id="share-icons">
             <a :href="'https://twitter.com/intent/tweet?url=' + url">
               <img src="./assets/twitter.png" />
@@ -103,7 +103,14 @@ export default {
   padding: 50px;
 }
 
+#main_layout.md #post_container,
+#main_layout.sm #post_container,
+#main_layout.xs #post_container{
+  padding: 15px;
+}
+
 #post{
+  max-width: 100%;
   flex-basis: 76%;
   text-align: justify;
   font-family: MavenPro;
@@ -141,6 +148,12 @@ export default {
 #share{
   display: flex;
   justify-content: space-between;
+}
+
+#share_this_post{
+  flex-basis: 25%;
+  display: flex;
+  align-items: center;
 }
 
 #share-icons{

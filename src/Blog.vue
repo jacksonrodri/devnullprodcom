@@ -7,7 +7,7 @@
     <div id="blog">
       <div id="timeline-border" v-if="mq_gte_lg" />
       <div v-for="post in sorted_enabled_posts" :key="post.path" class="post">
-        <div class="post_date">
+        <div class="post_date" v-if="mq_gte_lg">
           <div class="post_day">
             {{parsed_dates[post.path].getDate()}}
           </div>
@@ -81,7 +81,7 @@ export default {
 #main_layout.md #blog,
 #main_layout.sm #blog,
 #main_layout.xs #blog{
-  margin-left: 75px;
+  margin-left: unset;
 }
 
 #timeline-border{
@@ -111,12 +111,6 @@ export default {
   color: #CCC;
   background-color: white;
   font-weight: bold;
-}
-
-#main_layout.md .post_date,
-#main_layout.sm .post_date,
-#main_layout.xs .post_date{
-  left: -85px;
 }
 
 .post:hover .post_date{

@@ -44,10 +44,17 @@ export default {
 #main_content{
   position: relative;
   margin-top: -100px;
+  margin-bottom: 75px;
 }
 
 #main_header_container{
   position: relative;
   z-index: 100;
+}
+
+#main_footer_container{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 </style>

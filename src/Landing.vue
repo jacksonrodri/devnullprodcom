@@ -90,7 +90,7 @@ export default {
   width: 80%;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 #main_layout.md #partners,
