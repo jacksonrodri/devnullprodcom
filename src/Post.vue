@@ -35,7 +35,7 @@
         </div>
       </div>
 
-      <div id="sidebar">
+      <div id="sidebar" v-if="mq_gte_lg">
         <TwitterFeed />
         <hr/>
         <RecentPosts />
@@ -107,6 +107,12 @@ export default {
   flex-basis: 76%;
   text-align: justify;
   font-family: MavenPro;
+}
+
+#main_layout.md #post,
+#main_layout.sm #post,
+#main_layout.xs #post{
+  flex-basis: unset;
 }
 
 #sidebar{

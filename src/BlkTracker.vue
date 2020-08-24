@@ -66,12 +66,13 @@ export default {
   width: 100%;
   min-height: 500px;
   padding-top: 100px;
-  background-image: url("./assets/email.png");
+  background-image: url("./assets/geometric.jpg");
   background-size: 100% 100%;
 }
 
 #title_wrapper h1{
   text-align: center;
+  color: white;
   font-family: Lora;
 }
 
@@ -80,7 +81,12 @@ export default {
   display: block;
   max-width: 750px;
   margin: auto;
-  border-radius: 30px;
+}
+
+#main_layout.md #title_wrapper img,
+#main_layout.sm #title_wrapper img,
+#main_layout.xs #title_wrapper img{
+  max-width: 100%;
 }
 
 #content{
@@ -89,6 +95,12 @@ export default {
   width: 90%;
   margin: auto;
   font-family: MavenPro;
+}
+
+#main_layout.md #content,
+#main_layout.sm #content,
+#main_layout.xs #content{
+  flex-direction: column-reverse;
 }
 
 #content1 {

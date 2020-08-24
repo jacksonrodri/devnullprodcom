@@ -5,7 +5,7 @@
     </div>
 
     <div id="blog">
-      <div id="timeline-border" />
+      <div id="timeline-border" v-if="mq_gte_lg" />
       <div v-for="post in sorted_enabled_posts" :key="post.path" class="post">
         <div class="post_date">
           <div class="post_day">
@@ -17,7 +17,7 @@
           </div>
         </div>
 
-        <div class="timeline-divider" />
+        <div class="timeline-divider" v-if="mq_gte_lg" />
 
         <router-link :to="'/post/' + post.path">
           <img :src="post_img(post)" class="post_img" />
@@ -78,6 +78,12 @@ export default {
   font-family: MavenPro;
 }
 
+#main_layout.md #blog,
+#main_layout.sm #blog,
+#main_layout.xs #blog{
+  margin-left: 75px;
+}
+
 #timeline-border{
   position: absolute;
   top: 0;
@@ -107,6 +113,12 @@ export default {
   font-weight: bold;
 }
 
+#main_layout.md .post_date,
+#main_layout.sm .post_date,
+#main_layout.xs .post_date{
+  left: -85px;
+}
+
 .post:hover .post_date{
   border-color: #3499FF;
   color: #3499FF;
@@ -132,6 +144,13 @@ export default {
   max-width: 750px;
   max-height: 250px;
 }
+
+#main_layout.md .post_img,
+#main_layout.sm .post_img,
+#main_layout.xs .post_img{
+  max-width: 100%;
+}
+
 
 .post_title{
   margin-top: 15px;

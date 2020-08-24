@@ -65,6 +65,12 @@ export default {
   margin-right: 15px;
 }
 
+#main_layout.md .team_member img,
+#main_layout.sm .team_member img,
+#main_layout.xs .team_member img{
+  max-width: 100px;
+}
+
 .name{
   font-size: 1.25rem;
 }

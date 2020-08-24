@@ -4,41 +4,41 @@
       <img src="../assets/logo.svg" id="logo" />
     </router-link>
 
-    <nav id="nav">
-      <ul>
-        <li><router-link to="/">Home</router-link></li>
+    <div v-if="mq_lt_lg">
+      <img id="main_hamburger_open_icon"
+           src="../assets/hamburger.svg"
+           @click="hamburger_visible = true"/>
 
-        <li>
-          <b-dropdown id="products">
-            <template v-slot:button-content>
-              Products
-            </template>
+      <div id="main_hamburger" v-show="hamburger_visible">
+        <div id="hide_hamburger"
+             @click="hamburger_visible = false">
+          <img id="main_hamburger_close_icon"
+               src="../assets/x-white.svg" />
+        </div>
 
-            <b-dropdown-item>
-              <router-link to="/products/tracker">
-                Blockchain Tracker
-              </router-link>
-            </b-dropdown-item>
+        <MainNav hamburger @nav="hamburger_visible = false"/>
+      </div>
+    </div>
 
-            <b-dropdown-item>
-              <router-link to="/products/dex">
-                DEX Intel
-              </router-link>
-            </b-dropdown-item>
-          </b-dropdown>
-        </li>
-
-        <li><router-link to="/blog">Blog</router-link>
-
-        <li><router-link to="/about">About Us</router-link></li>
-      </ul>
-    </nav>
+    <MainNav v-else />
   </div>
 </template>
 
 <script>
+import MainNav from './MainNav'
+
 export default {
-  name: 'MainHeader'
+  name: 'MainHeader',
+
+  components : {
+    MainNav
+  },
+
+  data : function(){
+    return {
+      hamburger_visible : false
+    };
+  }
 }
 </script>
 
@@ -47,57 +47,43 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
+  z-index: 10;
 }
 
 #logo{
   height: 100px;
   width: 100px;
-  margin-left: 25px;
+  margin-left: 15px;
 }
 
-#nav{
-  flex-basis: 25%;
+#main_hamburger_open_icon{
   margin-right: 25px;
-  font-family: MavenPro;
+  width: 25px;
+  cursor: pointer;
 }
 
-#main_layout.md #nav{
-  flex-basis: 40%;
+#main_layout.xs #main_hamburger_open_icon{
+  width: 20px;
 }
 
-#main_layout.sm #nav,
-#main_layout.xs #nav{
-  flex-basis: 60%;
+#main_hamburger{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+
+  background-color: blue;
+  padding: 20px;
 }
 
-#nav ul{
-  display: flex;
-  justify-content: space-between;
-  padding-left: 0;
+#main_hamburger_close_icon{
+  width: 25px;
 }
 
-#nav li{
-  list-style-type: none;
-  color: white;
-}
-
-#nav a{
-  color: white;
-  text-decoration: none;
-}
-</style>
-
-<style>
-#products .btn{
-  padding: 0;
-  padding-bottom: 5px;
-  background-color: unset;
-  border: none;
-  box-shadow: none;
-}
-
-#products a{
-  color: black !important;
+#hide_hamburger{
+  cursor: pointer;
+  text-align: right;
 }
 </style>

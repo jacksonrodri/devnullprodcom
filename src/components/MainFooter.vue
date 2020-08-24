@@ -1,6 +1,8 @@
 <template>
   <div id="main_footer">
-    <span>(C) 2018-2020 Dev Null Productions LLC. All Rights Reserved |</span>
+    <span>(C) 2018-2020 Dev Null Productions LLC.</span>
+    <br v-if="mq_lt_lg" />
+    <span>All Rights Reserved |</span>
 
     <a href="https://twitter.com/DevNullProd">
       <img src="../assets/twitter.png" />

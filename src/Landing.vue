@@ -27,10 +27,6 @@
         <div class="partner">
           <a href="https://coventure.vc"><img src="./assets/partners/coventure.png" /></a>
         </div>
-
-        <div class="partner">
-          <a href="https://media4.rs"><img src="./assets/partners/media4.png" /></a>
-        </div>
       </div>
     </div>
   </MainLayout>
@@ -97,6 +93,12 @@ export default {
   justify-content: space-between;
 }
 
+#main_layout.md #partners,
+#main_layout.sm #partners,
+#main_layout.xs #partners{
+  flex-direction: column;
+}
+
 .partner{
   padding: 10px 50px;
   background-color: white;
@@ -104,6 +106,13 @@ export default {
   align-items: center;
   border-radius: 5px;
   border: 1px solid black;
+}
+
+#main_layout.md .partner,
+#main_layout.sm .partner,
+#main_layout.xs .partner{
+  margin-bottom: 25px;
+  min-height: 100px;
 }
 
 .partner img{

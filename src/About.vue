@@ -16,7 +16,7 @@
 
       <div id="team">
         <b-container>
-          <b-row>
+          <b-row :cols="mq_lt_lg ? 1 : 2">
             <b-col>
               <TeamMember name="Mo Morsi"
                           title="CEO"
@@ -30,9 +30,7 @@
                           photo="placeholder.png"
                           bio="<p>A Senior Analyst at Bristol Myers Squibb, and holding a Masters Degree in Economics, Lamyae provides the advanced operational and market insights needed to run operations at Dev Null Productions.</p>" />
             </b-col>
-          </b-row>
 
-          <b-row>
             <b-col>
               <TeamMember name="Sarah Hussein"
                           title="CMO"
@@ -70,15 +68,28 @@ export default {
 #title_wrapper{
   width: 100%;
   min-height: 500px;
-  padding-top: 175px;
+  padding-top: 165px;
   background-image: url("./assets/conference-room.jpg");
   background-size: 100% 100%;
+}
+
+#main_layout.md #title_wrapper,
+#main_layout.sm #title_wrapper,
+#main_layout.xs #title_wrapper{
+  padding-top: 125px;
+  background-image: url("./assets/boardroom.jpg");
 }
 
 #title_wrapper h1{
   text-align: center;
   color: black;
   font-family: Lora;
+}
+
+#main_layout.md #title_wrapper h1,
+#main_layout.sm #title_wrapper h1,
+#main_layout.xs #title_wrapper h1{
+  color: white;
 }
 
 #content{
