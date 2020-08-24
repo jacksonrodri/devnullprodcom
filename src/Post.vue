@@ -128,7 +128,7 @@ export default {
 
 .post_img{
   max-width: 750px;
-  max-height: 250px;
+  max-height: 500px;
   margin-bottom: 15px;
 }
 
@@ -145,7 +145,8 @@ export default {
 
 <style>
 #post_container h1,
-#post_container h2{
+#post_container h2,
+#post_container h3{
   margin-top: 25px;
 }
 

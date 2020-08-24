@@ -2,7 +2,7 @@ We are pleased to announce the general availability of Wipple 0.13.1, now [live]
 
 This release brings many exciting new features and more stabilizations to the entire application.
 
-To start off, we've made many improvements to the general look and feel of the website. The [account](https://wipple.devnull.network/live/accounts/rPVMhWBsfF9iMXYj3aAzJVkPDTFNSyWdKy), [tips](https://wipple.devnull.network/live/tips/XRPTrump, and [transactions](https://wipple.devnull.network/live/transactions) pages have been updated to streamline data delivery in an aesthetically pleasing manner.
+To start off, we've made many improvements to the general look and feel of the website. The [account](https://wipple.devnull.network/live/accounts/rPVMhWBsfF9iMXYj3aAzJVkPDTFNSyWdKy), [tips](https://wipple.devnull.network/live/tips/XRPTrump), and [transactions](https://wipple.devnull.network/live/transactions) pages have been updated to streamline data delivery in an aesthetically pleasing manner.
 
 ![accounts](@/assets/posts/wipple-version-0-13-1/accounts.png)
 

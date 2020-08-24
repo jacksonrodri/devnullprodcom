@@ -38,4 +38,4 @@ Finally we have accounts created which saw a spike last summer in the May &amp; 
 ![account rate monthly](@/assets/posts/2019-in-xrp/account.rate.monthly.png)
 ![account rate weekly](@/assets/posts/2019-in-xrp/account.rate.weekly.png)
 
-The complete yearly dataset can be found [here](@/assets/posts/2019.xrp/stats.xlsx). You can also see various metrics and benchmarks on the XRPArcade [2019 Yearly Report](https://www.xrparcade.com/news/xrp-2019-yearly-report/) (under **XRP Intelligence**). Going forward be sure to look for consistent XRP data and stats coming from Dev Null Productions as well as new metrics and an expanded and optimized reporting system (for quicker and better reports). Keep Zerping!
+The complete yearly dataset can be found [here](/files/2019-xrp-stats.xlsx). You can also see various metrics and benchmarks on the XRPArcade [2019 Yearly Report](https://www.xrparcade.com/news/xrp-2019-yearly-report/) (under **XRP Intelligence**). Going forward be sure to look for consistent XRP data and stats coming from Dev Null Productions as well as new metrics and an expanded and optimized reporting system (for quicker and better reports). Keep Zerping!

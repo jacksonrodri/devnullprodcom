@@ -70,4 +70,4 @@ Finally the following is a list of some interesting articles &amp; news stories 
 - [Ripple strengthens its presence in the APAC region with 3 more customers](https://www.xrparcade.com/news/ripple-strengthens-presence-in-apac-region-with-3-more-partners/)
 - [Santander to expand Ripple powered One Pay FX to Mexico](https://www.xrparcade.com/news/santander-to-expand-ripple-powered-one-pay-fx-to-mexico/)
 
-The complete dataset which was used to generate the metrics above can be found [here](/posts/xrp-2020-quarter-1/stats.xlsx).
+The complete dataset which was used to generate the metrics above can be found [here](/files/2020q1-xrp-stats.xlsx).
