@@ -1,5 +1,13 @@
 [
   {
+    "path" : "flexrp",
+    "title" : "FleXRP - Claiming Flare Spark",
+    "summary" : "Flare is an exciting way to scaling smart contracts independently of token valuation. By setting up your XRP account, you can receive Flare Spark tokens for free! Find out more inside!",
+    "tags" : "flexrp, flare, spark, xrp",
+    "date" : "2020-11-28T14:13:00Z"
+  },
+
+  {
     "path" : "zerp-tracker",
     "title" : "Zerp Tracker",
     "summary" : "Last month Dev Null Productions launched our latest product Zerp Tracker, a persistent XRP transaction tracker through which server-side filters can be setup for instant notification of ledger activity.",
