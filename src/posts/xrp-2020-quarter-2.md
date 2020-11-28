@@ -42,13 +42,13 @@ The network saw **81,538** new accounts last quarter, at an average rate of **6,
 
 Finally the following is a list of some interesting articles &amp; news stories from our partner site [XRP Arcade](https://xrparcade.com/)
 
-- [Bank of America confirms Ripple Partnership](https://www.xrparcade.com/news/bank-of-america-confirms-ripple-partnership/
-- [The XRPL gets an upgrade and increased decentralization](https://www.xrparcade.com/news/the-xrpl-gets-an-upgrade-and-increased-decentralization/
-- [Introducing Ripple’s podcast series: Block Stars with David Schwartz](https://www.xrparcade.com/news/introducing-ripples-podcast-series-block-stars-with-david-schwartz/
-- [XRPL deletable accounts amendment enabled: What’s new?](https://www.xrparcade.com/news/xrpl-deletable-accounts-amendment-enabled-whats-new/
-- [ShapeShift platform and KeepKey wallet now support XRP](https://www.xrparcade.com/news/shapeshift-platform-and-keepkey-wallet-now-support-xrp/
-- [Bitrue runs on Ripple](https://www.xrparcade.com/news/bitrue-runs-on-ripple/
-- [Hacker Noon raises $1M from Coil, integrates Web Monetization](https://www.xrparcade.com/news/hacker-noon-raises-1m-from-coil-integrates-web-monetization/
-- [Now you can write checks on the XRPL](https://www.xrparcade.com/news/now-you-can-write-checks-on-the-xrpl/
+- [Bank of America confirms Ripple Partnership](https://www.xrparcade.com/news/bank-of-america-confirms-ripple-partnership/)
+- [The XRPL gets an upgrade and increased decentralization](https://www.xrparcade.com/news/the-xrpl-gets-an-upgrade-and-increased-decentralization/)
+- [Introducing Ripple’s podcast series: Block Stars with David Schwartz](https://www.xrparcade.com/news/introducing-ripples-podcast-series-block-stars-with-david-schwartz/)
+- [XRPL deletable accounts amendment enabled: What’s new?](https://www.xrparcade.com/news/xrpl-deletable-accounts-amendment-enabled-whats-new/)
+- [ShapeShift platform and KeepKey wallet now support XRP](https://www.xrparcade.com/news/shapeshift-platform-and-keepkey-wallet-now-support-xrp/)
+- [Bitrue runs on Ripple](https://www.xrparcade.com/news/bitrue-runs-on-ripple/)
+- [Hacker Noon raises $1M from Coil, integrates Web Monetization](https://www.xrparcade.com/news/hacker-noon-raises-1m-from-coil-integrates-web-monetization/)
+- [Now you can write checks on the XRPL](https://www.xrparcade.com/news/now-you-can-write-checks-on-the-xrpl/)
 
 The complete dataset which was used to generate the metrics above can be found [here](/files/2020q2-xrp-stats.xlsx).
