@@ -15,7 +15,8 @@
     </div>
 
     <div id="promo">
-      <iframe width="560" height="315"
+      <iframe :width="mq_xs ? 280 : 560"
+              :height="mq_xs ? 158 : 315"
               src="https://www.youtube.com/embed/THZZd3693AM"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
