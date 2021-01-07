@@ -14,12 +14,14 @@
       </div>
     </div>
 
-    <iframe width="560" height="315"
-            src="https://www.youtube.com/embed/THZZd3693AM"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-    </iframe>
+    <div id="promo">
+      <iframe width="560" height="315"
+              src="https://www.youtube.com/embed/THZZd3693AM"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+      </iframe>
+    </div>
 
     <!--<div id="partners_wrapper">
       <div id="partners_title_wrapper">
@@ -79,6 +81,10 @@ export default {
 
 #content p{
   font-family: MavenPro;
+  text-align: center;
+}
+
+#promo{
   text-align: center;
 }
 
