@@ -14,7 +14,7 @@
 
         <div id="content2">
           <p>
-            Our patented transaction tracking suite is the perfect solution to receive email, text message, and webhook alerts on Blockchain activity with no fuss.
+            Our transaction tracking suite (patent pending) is the perfect solution to receive email, text message, and webhook alerts on Blockchain activity with no fuss.
           </p>
 
           <p>
@@ -42,8 +42,13 @@
           </p>
 
           <p>
-            <a href="https://zerptracker.com">Sign up</a> for an account today!
+            Sign up for an account today!
           </p>
+
+          <ul>
+            <li><a href="https://zerptracker.com">XRP</a></li>
+            <li><a href="https://stracker.io">XLM</a></li>
+          </ul>
         </div>
       </div>
     </div>
