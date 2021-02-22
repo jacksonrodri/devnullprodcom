@@ -1,5 +1,12 @@
 [
   {
+    "path" : "xrp_vs_xlm",
+    "title" : "XRP vs XLM - A Technical Comparison",
+    "summary" : "XRP and XLM are Blockchain technologies facilitating high transfer rates and the issuance and exchange of digital assets. Read our analysis of the technical differences between these cryptocurrencies.",
+    "tags" : "xrp, xlm, technical",
+    "date" : "2021-02-09T11:56:00Z"
+  },
+  {
     "path" : "flexrp",
     "title" : "FleXRP - Claiming Flare Spark",
     "summary" : "Flare is an exciting way to scaling smart contracts independently of token valuation. By setting up your XRP account, you can receive Flare Spark tokens for free! Find out more inside!",
