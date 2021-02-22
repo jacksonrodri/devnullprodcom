@@ -112,6 +112,7 @@ export default {
 #post{
   max-width: 100%;
   flex-basis: 76%;
+  overflow: auto;
   text-align: justify;
   font-family: MavenPro;
 }
