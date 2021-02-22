@@ -1,6 +1,6 @@
 <template>
   <div id="main_footer">
-    <span>(C) 2018-2020 Dev Null Productions LLC.</span>
+    <span>(C) 2018-2021 Dev Null Productions LLC.</span>
     <br v-if="mq_lt_lg" />
     <span>All Rights Reserved |</span>
 
