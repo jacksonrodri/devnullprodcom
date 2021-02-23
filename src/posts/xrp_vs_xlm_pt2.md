@@ -1,5 +1,7 @@
 Be sure to read out [first post](/post/xrp_vs_xlm_pt1) in this series in which we introduce technical differences between these Blockchain technologies.
 
+In this article we continue our analysis, diving into common transactions that can be issued with both of them
+
 <h2>Common Transactions</h2>
 
 There are many different transactions that can be issued by an account owner. The common ones represented in both XRP and XLM fall into four general categories:
@@ -421,7 +423,7 @@ server.loadAccount(source.publicKey())
 
 <h3>Trust Management</h3>
 
-Sending and receiving non-native assets (anything other than XRP and XLM respectively) on the ledger requires custodians, called <b>gateways</b> on XRP and <b>anchors</b> on XLM. These institution hold and manage the asset offline, in 'the real world'.
+Sending and receiving non-native assets (anything other than XRP and XLM respectively) on the ledger requires custodians, called <b>gateways</b> on XRP and <b>anchors</b> on XLM. These institutions hold and manage the asset offline, in 'the real world'.
 
 An account may extend trust to a custodian to issue managed assets to their account. Once issued, the account may send and receive those assets in a similar manner to the native assets. Whoever holds issued assets may redeem them with the custodian but sending them back, assumably resulting in a balance credit in an external ledger.
 
@@ -492,7 +494,7 @@ The following transaction initiates trust on the XRP ledger:
 
 It was established with the following logic:
 
-```javasacript
+```javascript
 // Replace these with the corresponding account and trustline info
 const TRUSTER = "rUyFVKFhUK7NmAUejgyQyJm87spAWQ7D3K";
 const ISSUER  = "rEB3GQRkiLcx4UpGhjUkTkKyDGUeKhVkx8";

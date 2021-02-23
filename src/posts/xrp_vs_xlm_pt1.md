@@ -6,6 +6,8 @@ At a high level, XRP and XLM both offer similar feature sets. Both can be used t
 
 While both technologies can be uesd to serve a multitude of use cases, the stated goals of each & the surrounding institutions vary:
 
+![ripple stellar](@/assets/posts/xrp_vs_xlm_pt1/ripple-stellar.png)
+
 - XRP / Ripple Labs: <i>improving cross-border payments to optimize the financial rails of tommorow</i>
 - XLM / Stellar Foundation: <i>advancing financial inclusion globally in a responsible and sustainable way</i>
 
@@ -17,13 +19,15 @@ New accounts are created when XRP/XLM meeting the minimum reserve requirements a
 
 <b>The current reserve is 20 XRP and 1 XLM</b>.
 
+![banks](@/assets/posts/xrp_vs_xlm_pt1/bank.png)
+
 Additional reserve requirements are enforced if the account is associated with various on-ledger constructs including offers, trust lines, signer lists, escrows/payment channels/checks (XRP only), and data entries (XLM only). For XRP this reserve, known as the <b>Owner Reserve</b>, is currently <b>5 XRP</b>. For XLM this reserve, known as the <b>Base Reserve</b>, is currently <b>0.5 XLM</b>.
 
 <h2>Code Prerequisites</h2>
 
 <h3>XRP Prerequisites</h3>
 
-The examples below use the <b>ripple-lib</b> library which can be installed with:
+The examples in the next articles use the <b>ripple-lib</b> library which can be installed with:
 
 ```
 $ npm i ripple-lib
@@ -38,13 +42,13 @@ api = new rpi({
 });
 
 api.connect().then(async () => {
-  // Do stuff with 'api' here, see below
+  // Do stuff with 'api' here
 })
 ```
 
 <h3>XLM Prerequisites</h3>
 
-The examples below use the <b>stellar-sdk</b> library which can be installed with:
+The examples in the next articles use the <b>stellar-sdk</b> library which can be installed with:
 
 ```
 $ npm i stellar-sdk
@@ -56,7 +60,7 @@ And imported / initialized in the following manner:
 var StellarSdk = require('stellar-sdk')
 var server = new StellarSdk.Server('https://horizon.stellar.org');
 
-// Do stuff w/ 'server' here, see below
+// Do stuff w/ 'server' here
 ```
 
 <h3>Testnet</h3>
@@ -75,6 +79,8 @@ On these networks special services called faucets can be used to generate accoun
 <h2>Transactions</h2>
 
 After an account is created, it can issue transactions to modify the Blockchain in specific ways. <b>With XRP each transaction contains a single operation modifying the ledger whereas in XLM a transaction can specify multiple operations.</b>
+
+![transaction](@/assets/posts/xrp_vs_xlm_pt1/transaction.jpg)
 
 In large the corresponding data structures are simpler and quicker to parse than XLM. By contrast XLM transactions can contain multiple operations, each of which corresponds to one atomic ledger modification. Thus XLM transactions while more complicated provide more bang for their buck as several disparate operations can be combined into one ledger request.
 
@@ -121,7 +127,7 @@ The XRP transaction format is as follows:
 
 <b>Note</b>: The transaction format as sent when listening to a subscription stream is slightly different than that when retrieving a transaction by id explicitly from the server. The format above in an example of the former.
 
-The transaction itself is contained in the <i>transaction</i> field along with the common fields outlined above (Account, Fee, TransactionType, etc). See specific transactions below for details of other fields present here.
+The transaction itself is contained in the <i>transaction</i> field along with the common fields outlined above (Account, Fee, TransactionType, etc). See specific transactions in the next articles for details of other fields present here.
 
 <i>meta</i> contains an array of affected nodes falling into three categories.
 
@@ -195,37 +201,8 @@ The XLM transaction format is as follows:
 
 XLM transactions encode the <i>envelope</i>, <i>result</i>, <i>result_meta</i>, and <i>fee_meta</i> fields in the optimized <i>[XDR](https://en.wikipedia.org/wiki/External_Data_Representation)</i> format. Converting these fields to a human friendly format results in a transaction that looks like the following:
 
-...
 ```json
 {
-  "_links": {
-    "self": {
-      "href": "https://horizon-testnet.stellar.org/transactions/<TX HASH>"
-    },
-    "account": {
-      "href": "https://horizon-testnet.stellar.org/accounts/<SOURCE ACCOUNT>"
-    },
-    "ledger": {
-      "href": "https://horizon-testnet.stellar.org/ledgers/1849749"
-    },
-    "operations": {
-      "href": "https://horizon-testnet.stellar.org/transactions/<TX HASH>/operations{?cursor,limit,order}",
-      "templated": true
-    },
-    "effects": {
-      "href": "https://horizon-testnet.stellar.org/transactions/<TX HASH>/effects{?cursor,limit,order}",
-      "templated": true
-    },
-    "precedes": {
-      "href": "https://horizon-testnet.stellar.org/transactions?order=asc&cursor=<TX CURSOR>"
-    },
-    "succeeds": {
-      "href": "https://horizon-testnet.stellar.org/transactions?order=desc&cursor=<TX CURSOR>"
-    },
-    "transaction": {
-      "href": "https://horizon-testnet.stellar.org/transactions/<TX HASH>"
-    }
-  },
   "id": "<TX HASH>",
   "paging_token": "<TX CURSOR>",
   "successful": true,
@@ -301,7 +278,7 @@ XLM transactions encode the <i>envelope</i>, <i>result</i>, <i>result_meta</i>, 
 }
 ```
 
-For the purposes of the examples below, the XDR fields have been converted.
+For the purposes of the forthcoming examples, the XDR fields have been converted.
 
 XLM transactions contain common fields in the top level object along w/ links to Horizon server resources related to the tx. Diving in from there:
 

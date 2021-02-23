@@ -1,5 +1,7 @@
 Be sure to read out [introduction](/post/xrp_vs_xlm_pt1) to this series as well as [part 2](/post/xrp_vs_xlm_pt2) in which we discuss common transactions.
 
+In this third installment, we explore transactions specific to each standard, not present in the other
+
 <h2>XRP specific transactions</h2>
 
 XRP faciliates the following following functionality on ledger:
@@ -156,7 +158,7 @@ XLM faciliates the following on ledger:
 
 <h3>Creating Accounts</h3>
 
-As discussed above, account creation on XLM is an explicit operation, orchestrated by calling the <b>CreateAccount</b> operation like so:
+As discussed previously, account creation on XLM is an explicit operation, orchestrated by calling the <b>CreateAccount</b> operation like so:
 
 ```javascript
 // Replace these with the corresponding account and destination

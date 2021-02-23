@@ -1,4 +1,6 @@
-Be sure to read out [introduction](/post/xrp_vs_xlm_pt1) to this series as well as [part 2](/post/xrp_vs_xlm_pt2) in which we discuss common transactions and [part 3](/post/xrp_vs_xlm_pt3) where we discuss transactions specific to each standard.
+Be sure to read out [introduction](/post/xrp_vs_xlm_pt1) to this series as well as [part 2](/post/xrp_vs_xlm_pt2) in which we discuss common transactions and [part 3](/post/xrp_vs_xlm_pt3) where we explore transactions specific to each standard.
+
+In the final article, we finish with miscellanea details of the protocols including result codes, streaming, flags and settings, network topology, and source code
 
 <h2>Transaction Results</h2>
 
@@ -34,7 +36,7 @@ Additionally, individual XLM operation result codes can be found [here](https://
 
 <h2>Streaming</h2>
 
-Both XRP and XLM allow clients to stream events from the network such that as they occur clients are automatically notified.
+Both XRP and XLM allow clients to stream events from the network such that as they occur, clients are automatically notified.
 
 <h3>XRP Streaming</h3>
 
