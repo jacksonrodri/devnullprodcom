@@ -1,10 +1,31 @@
 [
   {
-    "path" : "xrp_vs_xlm",
-    "title" : "XRP vs XLM - A Technical Comparison",
+    "path" : "xrp_vs_xlm_pt4",
+    "title" : "XRP vs XLM - A Technical Comparison - Part 4",
+    "summary" : "In the final article in our XRP/XLM technical comparison, we discuss miscellanea details of the protocols including result codes, streaming, flags and settings, network topology, and source code.",
+    "tags" : "xrp, xlm, technical",
+    "date" : "2021-03-03T11:56:00Z"
+  },
+  {
+    "path" : "xrp_vs_xlm_pt3",
+    "title" : "XRP vs XLM - A Technical Comparison - Part 3",
+    "summary" : "In the third installment of our XRP / XLM technical comparison, we discuss transactions specific to each standard, not present in the other",
+    "tags" : "xrp, xlm, technical",
+    "date" : "2021-03-01T11:56:00Z"
+  },
+  {
+    "path" : "xrp_vs_xlm_pt2",
+    "title" : "XRP vs XLM - A Technical Comparison - Part 2",
+    "summary" : "In this article we continue our technical analysis of the differences between XRP and XLM, diving into common transactions that can be issued with both of them",
+    "tags" : "xrp, xlm, technical",
+    "date" : "2021-02-25T11:56:00Z"
+  },
+  {
+    "path" : "xrp_vs_xlm_pt1",
+    "title" : "XRP vs XLM - A Technical Comparison - Part 1",
     "summary" : "XRP and XLM are Blockchain technologies facilitating high transfer rates and the issuance and exchange of digital assets. Read our analysis of the technical differences between these cryptocurrencies.",
     "tags" : "xrp, xlm, technical",
-    "date" : "2021-02-09T11:56:00Z"
+    "date" : "2021-02-23T11:56:00Z"
   },
   {
     "path" : "flexrp",
