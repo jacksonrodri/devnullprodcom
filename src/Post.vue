@@ -121,6 +121,7 @@ export default {
 #main_layout.sm #post,
 #main_layout.xs #post{
   flex-basis: unset;
+  text-align: unset;
 }
 
 #sidebar{
@@ -173,5 +174,15 @@ export default {
 #post_container img{
   max-width: 100%;
   padding: 25px;
+}
+
+#main_layout.md #post ul,
+#main_layout.sm #post ul,
+#main_layout.xs #post ul{
+  padding-left: 25px;
+}
+
+#post_container pre{
+  max-height: 750px;
 }
 </style>

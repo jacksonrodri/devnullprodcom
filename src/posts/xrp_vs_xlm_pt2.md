@@ -1,12 +1,14 @@
-Be sure to read out [first post](/post/xrp_vs_xlm_pt1) in this series in which we introduce technical differences between these Blockchain technologies.
+Be sure to read our [first post](/post/xrp_vs_xlm_pt1) in this series in which we introduce technical differences between these Blockchain technologies.
 
-In this article we continue our analysis, diving into common transactions that can be issued with both of them
+In this article we continue our analysis, diving into common transactions that can be issued with both of them.
 
 <h2>Common Transactions</h2>
 
 There are many different transactions that can be issued by an account owner. The common ones represented in both XRP and XLM fall into four general categories:
 
 <h3>Payments</h3>
+
+![payment](@/assets/posts/xrp_vs_xlm_pt2/payment.png)
 
 <b>Payment</b> transactions allow value to be transferred from on account to another on the ledger. Payment Paths facilite the automatic conversion of assets using open offers and can be set in the Payment transaction itself on XRP or via the <b>PaymentPathStrictSend</b> and <b>PaymentPathStrictReceive</b> operations on XLM.
 
@@ -386,7 +388,7 @@ The following is an example of an XLM payment transaction
 }
 ```
 
-To issue a payment, the following code can be used:
+To issue a payment, use the following code:
 
 ```javascript
 // Replace these with the corresponding account and payment info
@@ -421,11 +423,15 @@ server.loadAccount(source.publicKey())
       })
 ```
 
+<hr/>
+
 <h3>Trust Management</h3>
+
+![trust](@/assets/posts/xrp_vs_xlm_pt2/trust.jpg)
 
 Sending and receiving non-native assets (anything other than XRP and XLM respectively) on the ledger requires custodians, called <b>gateways</b> on XRP and <b>anchors</b> on XLM. These institutions hold and manage the asset offline, in 'the real world'.
 
-An account may extend trust to a custodian to issue managed assets to their account. Once issued, the account may send and receive those assets in a similar manner to the native assets. Whoever holds issued assets may redeem them with the custodian but sending them back, assumably resulting in a balance credit in an external ledger.
+An account may extend trust to a custodian to issue managed assets to their account. Once issued, the account may send and receive those assets in a similar manner to the native assets. Whoever holds issued assets may redeem them with the custodian by sending them back, assumably resulting in a balance credit in an external ledger.
 
 Trust can be extended to other accounts with the <b>TrustSet</b> transaction on the XRP ledger and the <b>ChangeTrust</b> transaction on XLM.
 
@@ -820,8 +826,11 @@ server.loadAccount(truster.publicKey())
 
 To delete an existing TrustLine simply set the limit to 0.
 
+<hr/>
 
 <h3>Offers</h3>
+
+![exchange](@/assets/posts/xrp_vs_xlm_pt2/exchange.jpg)
 
 Offers for native and non-native assets involve the creation and management of limit orders on the ledger. With XRP these are managed via <b>OfferCreate</b> and <b>OfferCancel</b> transactions and with XLM the corresponding transactions are <b>ManageBuyOffer</b>, <b>ManageSellOffer</b>, and <b>CreatePassiveSellOffer</b>.
 
@@ -929,7 +938,7 @@ The following transaction creates an offer on the XRP ledger:
 }
 ```
 
-This transaction can be constructed with the following code:
+This transaction was issued using the following code:
 
 ```javascript
 // Replace these with the corresponding account and asset info
@@ -1385,7 +1394,7 @@ The following transaction creates a buy offer:
 }
 ```
 
-This transaction can be constructed with the following code:
+This transaction was constructed with the following code:
 
 ```javascript
 // Replace these with the corresponding account and asset info
@@ -1423,10 +1432,12 @@ server.loadAccount(source.publicKey())
       })
 ```
 
+<hr/>
+
 <h3>Account Modifications</h3>
 
 Account behaviour can be tailored by configuring flags and settings via <b>AccountSet</b> transactions with XRP and <b>SetOptions</b> transactions with XLM. Accounts can be deleted and their remaining balances sent to others with <b>AccountDelete</b> transactions on the XRP ledger and <b>AccountMerge</b> transactions on the XLM ledger.
 
 <h2>Coming Soon</h2>
 
-Stay tuned for our next post in this series in which we will discuss transactions exclusive to XRP and XLM
+Stay tuned for our next post in this series in which we will discuss transactions exclusive to XRP and XLM.

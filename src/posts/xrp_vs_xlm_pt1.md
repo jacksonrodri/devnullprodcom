@@ -27,7 +27,7 @@ Additional reserve requirements are enforced if the account is associated with v
 
 <h3>XRP Prerequisites</h3>
 
-The examples in the next articles use the <b>ripple-lib</b> library which can be installed with:
+The examples in the articles in this series use the <b>ripple-lib</b> library which can be installed with:
 
 ```
 $ npm i ripple-lib
@@ -82,7 +82,7 @@ After an account is created, it can issue transactions to modify the Blockchain 
 
 ![transaction](@/assets/posts/xrp_vs_xlm_pt1/transaction.jpg)
 
-In large the corresponding data structures are simpler and quicker to parse than XLM. By contrast XLM transactions can contain multiple operations, each of which corresponds to one atomic ledger modification. Thus XLM transactions while more complicated provide more bang for their buck as several disparate operations can be combined into one ledger request.
+In large, corresponding data structures are simpler and quicker to parse in XRP than in XLM. By contrast XLM transactions can contain multiple operations, each of which corresponds to one atomic ledger modification. Thus XLM transactions, while more complicated, provide more bang for their buck as several disparate operations can be combined into one ledger request.
 
 For the purposes of this section we will refer to 'operations' as 'transactions'.
 
@@ -131,15 +131,15 @@ The transaction itself is contained in the <i>transaction</i> field along with t
 
 <i>meta</i> contains an array of affected nodes falling into three categories.
 
-- CreateNodes: are those created in the Blockchain database with this transaction
-- ModifiedNodes: are those updated in the Blockchain database with this transaction
-- DeletedNodes: are those removed from the Blockchain database with this transaction
+- <b>CreateNodes</b>: are those created in the Blockchain database with this transaction
+- <b>ModifiedNodes</b>: are those updated in the Blockchain database with this transaction
+- <b>DeletedNodes</b>: are those removed from the Blockchain database with this transaction
 
 The actual nodes vary depending on the context of the transaction and include things like:
 
-- AccountRoot: modified when account metadata is updated and XRP balances change
-- TrustLine: created, modified, delete upon trust line state management
-- Offer: created, modified, deleted as offer objects are created, accepted, replaced, and removed from the ledger
+- <b>AccountRoot</b>: modified when account metadata is updated and XRP balances change
+- <b>TrustLine</b>: created, modified, delete upon trust line state management
+- <b>Offer</b>: created, modified, deleted as offer objects are created, accepted, replaced, and removed from the ledger
 - & more
 
 <h3>XLM</h3>
@@ -282,10 +282,10 @@ For the purposes of the forthcoming examples, the XDR fields have been converted
 
 XLM transactions contain common fields in the top level object along w/ links to Horizon server resources related to the tx. Diving in from there:
 
-- The <i>envelope</i> field contains the operations which actually modify the Blockchain database.
-- The <i>result</i> field contains the list of results for each operation
-- The <i>result_meta</i> fields containst the list of changes the transaction made to the Blockchain database, including those before the operations are applied, by the operations themselves, and after.
+- The <b>envelope</b> field contains the operations which actually modify the Blockchain database.
+- The <b>result</b> field contains the list of results for each operation
+- The <b>result_meta</b> fields containst the list of changes the transaction made to the Blockchain database, including those before the operations are applied, by the operations themselves, and after.
 
 <h2>Coming Soon</h2>
 
-Stay tuned for our next post in this series in which we will discuss specific transactions common to both XRP and XLM
+Stay tuned for our next post in this series in which we will discuss specific transactions common to both XRP and XLM.

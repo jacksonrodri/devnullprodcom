@@ -1,4 +1,4 @@
-Be sure to read out [introduction](/post/xrp_vs_xlm_pt1) to this series as well as [part 2](/post/xrp_vs_xlm_pt2) in which we discuss common transactions.
+Be sure to read our [introduction](/post/xrp_vs_xlm_pt1) to this series as well as [part 2](/post/xrp_vs_xlm_pt2) in which we discuss common transactions.
 
 In this third installment, we explore transactions specific to each standard, not present in the other
 
@@ -8,9 +8,13 @@ XRP faciliates the following following functionality on ledger:
 
 <h3>Checks</h3>
 
+![check](@/assets/posts/xrp_vs_xlm_pt3/check.jpg)
+
 Like paper checks XRP checks allow users to create deferred payments that can be cashed or cancelled by the intended recipients. Checks are created with the <b>CheckCreate</b> transaction, cashed with the <b>CheckCash</b> transaction, and cancelled with the <b>CheckCancel</b> transaction.
 
 <h3>Escrows</h3>
+
+![safe](@/assets/posts/xrp_vs_xlm_pt3/safe.jpg)
 
 Escrows allow the locking of XRP for a fixed amount of time and/or until certain conditions are met. They can be created with the <b>EscrowCreate</b> transaction, finalized with the <b>EscrowFinish</b> transaction, and cancelled with the <b>EscrowCancel</b> transaction.
 
@@ -139,9 +143,11 @@ const result = await api.submit(response.signedTransaction)
 // Validate result here
 ```
 
-The XLM <i>ClaimableBalance</i> feature is somewhat similar to Escrows, with some caveats. See below for more information.
+The XLM <i>ClaimableBalance</i> feature is similar to Escrows, with some differences. See below for more information.
 
 <h3>Payment Channels</h3>
+
+![payment channel](@/assets/posts/xrp_vs_xlm_pt3/paychan.jpg)
 
 Payment Channels facilitate high throughput payments with deferred settlement. To create, claim, and fund a payment channel use the <b>PaymentChannelCreate</b>, <b>PaymentChannelClaim</b>, and <b>PaymentChannelFund</b> transactions accordingly.
 
@@ -157,6 +163,8 @@ XRP also supports the following additional transactions:
 XLM faciliates the following on ledger:
 
 <h3>Creating Accounts</h3>
+
+![new user](@/assets/posts/xrp_vs_xlm_pt3/new-user.png)
 
 As discussed previously, account creation on XLM is an explicit operation, orchestrated by calling the <b>CreateAccount</b> operation like so:
 
@@ -189,6 +197,8 @@ server.loadAccount(source.publicKey())
 ```
 
 <h3>Data Storage</h3>
+
+![database](@/assets/posts/xrp_vs_xlm_pt3/database.png)
 
 XLM allows accounts to store generic data blobs on the ledger at the expense of an increased reserve requirement. This is accomplished via the <b>ManageData</b> operation:
 
@@ -226,6 +236,8 @@ Both XRP and XLM associate a sequence number with accounts which is incremented 
 
 <h3>Claimable Balances</h3>
 
+![claim](@/assets/posts/xrp_vs_xlm_pt3/claim.png)
+
 Claimable Balances in XLM work in a similar manner to Escrows in XRP in that an originating account sets aside an asset (unlike XRP, non-native assets are permitted here) to be claimed upon certain conditions. XLM claimable balances facilitate complex / recursive predicates to allow any number of destination accounts to claim the asset balance upon satisfaction.
 
 To create a Claimable Balance, use the <b>CreateClaimableBalance</b> operation and to claim it, us the <b>ClaimClaimableBalance</b> operation.
@@ -236,4 +248,4 @@ The XLM ledger allows accounts to sponsor the reserve requirements of other acco
 
 <h2>Coming Soon</h2>
 
-  Stay tuned for our next and final post in this series in which we will discuss various miscellanea surrounding both standards including result codes, streaming, flags and settings, network topology, and source code.
+  Stay tuned for our next and final post in this series in which we will discuss various miscellanea surrounding both standards including result codes, streaming, flags and settings, and network topology.

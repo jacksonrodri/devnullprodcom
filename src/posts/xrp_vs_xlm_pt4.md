@@ -1,8 +1,10 @@
-Be sure to read out [introduction](/post/xrp_vs_xlm_pt1) to this series as well as [part 2](/post/xrp_vs_xlm_pt2) in which we discuss common transactions and [part 3](/post/xrp_vs_xlm_pt3) where we explore transactions specific to each standard.
+Be sure to read our [introduction](/post/xrp_vs_xlm_pt1) to this series as well as [part 2](/post/xrp_vs_xlm_pt2) in which we discuss common transactions and [part 3](/post/xrp_vs_xlm_pt3) where we explore transactions specific to each standard.
 
-In the final article, we finish with miscellanea details of the protocols including result codes, streaming, flags and settings, network topology, and source code
+In the final article, we finish with miscellanea details of the protocols including result codes, streaming, flags and settings, network topology, and source code.
 
 <h2>Transaction Results</h2>
+
+![finish](@/assets/posts/xrp_vs_xlm_pt4/finish.jpg)
 
 Both XRP and XLM define a set of codes which are associated with transactions based on the result of their operations. These sets comprehensively cover all the outcomes which transactions and operations can result in and while they are too extensive to list here we'll outline some common ones.
 
@@ -35,6 +37,8 @@ Additionally, individual XLM operation result codes can be found [here](https://
 - OpNoDestination - The destination account does not exist.
 
 <h2>Streaming</h2>
+
+![stream](@/assets/posts/xrp_vs_xlm_pt4/stream.jpg)
 
 Both XRP and XLM allow clients to stream events from the network such that as they occur, clients are automatically notified.
 
@@ -92,6 +96,8 @@ server.transactions()
 
 <h2>Account Flags and Settings</h2>
 
+![settings](@/assets/posts/xrp_vs_xlm_pt4/settings.jpg)
+
 With both XRP and XLM, account behaviour can be configured via server flags and other settings.
 
 <h3>XRP Flags / Settings</h3>
@@ -141,6 +147,8 @@ In accordance to the properties above, XLM categorizes operation into multiple c
 
 <h2>Network topology & services</h2>
 
+![network](@/assets/posts/xrp_vs_xlm_pt4/network.png)
+
 Both the XRP and XLM networks are governed by nodes communicating in a peer-to-peer manner that are responsible for accepting client transactions and relaying them around the network.
 
 The XRP network is goverened by the <a href="https://github.com/ripple/rippled">rippled</a> server and XLM is goverened by <a href="https://github.com/stellar/stellar-core">stellar-core</a>. These applications are responsible for:
@@ -170,6 +178,12 @@ XLM Operating Modes include:
 
 In addition to the stellar-core services, the XLM network integrates a client-facing frontend server called <a href="https://github.com/stellar/go">Horizon</a> which responsible for presenting data via a HTTP interface in a human / developer friendly manner, in contrast to the performance-optimized representations used by stellar-core.
 
+<!--<h3>Overlay protocols</h3>
+
+<h3>Datastores</h3>-->
+
 <h3>Source Code</h3>
+
+![code](@/assets/posts/xrp_vs_xlm_pt4/code.jpg)
 
 Both rippled and stellar-core are implmeneted C++, while Horizon is written in GoLang. Javascript libraries are provided as primary front-facing client interfaces to the network (for XRP <a href="https://github.com/ripple/ripple-lib">here</a> and for XLM <a href="https://github.com/stellar/js-stellar-sdk">here</a>) and libraries for many other languages are also available.
