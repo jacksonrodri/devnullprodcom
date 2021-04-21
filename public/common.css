@@ -8,6 +8,16 @@
   src: url('../src/assets/fonts/Lora-VariableFont_wght.ttf');
 }
 
+@font-face {
+  font-family: 'DM Sans';
+  src: url('../src/assets/fonts/DMSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../src/assets/fonts/Poppins-Regular.ttf');
+}
+
 html{
   min-height: 100%;
   display: flex;
