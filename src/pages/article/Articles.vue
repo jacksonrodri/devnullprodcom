@@ -6,24 +6,23 @@
           <h2 class="typography-h2 mb-5">Industry insight & knowledge</h2>
           <div class="article-section">
             <div class="article-list">
-              <div
-                class="article-item"
-                v-for="(item, index) of articles"
+              <ArticleItem
+                v-for="(item, index) of getArticles"
                 :key="index"
+                :item="item"
               >
-                <div class="article-item-content">
-                  <p class="article-item-content--date">{{item.date}}</p>
-                  <h4 class="article-item-content--subject">{{item.subject}}</h4>
-                  <div class="article-item-content--tags">
-                    <span>Tags: </span>
-                  </div>
-                </div>
-                <div class="article-item-image">
-                  
-                </div>
+              </ArticleItem>
+              <div class="text-center article-list-loadmore">
+                <b-button
+                  variant="primary"
+                  class="normal-btn text-white px-5 py-3"
+                  @click="loadMore"
+                >
+                  Load More
+                </b-button>
               </div>
-              
             </div>
+            <div class="twitter-iframe d-flex align-items-center justify-content-center typography-h4 text-body">Twitter Iframe</div>
           </div>
         </div>
       </div>
@@ -32,11 +31,13 @@
 </template>
 
 <script>
-import MainLayout from '@/components/layout/MainLayout'
+import MainLayout from "@/components/layout/MainLayout"
+import ArticleItem from "@/components/article/ArticleItem"
 export default {
-  name: 'Articles',
+  name: "Articles",
   components: {
     MainLayout,
+    ArticleItem
   },
   data() {
     return {
@@ -85,8 +86,55 @@ export default {
             "xlm",
             "technical"
           ]
+        },
+        {
+          date: "March 4th",
+          subject: "XRP vs XLM - A Technical Comparison - Part 4",
+          tags: [
+            "xrp",
+            "xlm",
+            "technical"
+          ]
+        },
+        {
+          date: "March 4th",
+          subject: "XRP vs XLM - A Technical Comparison - Part 4",
+          tags: [
+            "xrp",
+            "xlm",
+            "technical"
+          ]
+        },
+        {
+          date: "March 4th",
+          subject: "XRP vs XLM - A Technical Comparison - Part 4",
+          tags: [
+            "xrp",
+            "xlm",
+            "technical"
+          ]
+        },
+        {
+          date: "March 4th",
+          subject: "XRP vs XLM - A Technical Comparison - Part 4",
+          tags: [
+            "xrp",
+            "xlm",
+            "technical"
+          ]
         }
-      ]
+      ],
+      count: 1,
+    }
+  },
+  computed: {
+    getArticles: function() {
+      return this.articles.filter((_, index) => index < this.count * 5)
+    }
+  },
+  methods: {
+    loadMore: function() {
+      this.count ++
     }
   }
 }
@@ -112,10 +160,23 @@ export default {
 .article-section {
   border-top: 2px solid $primary-blue;
   padding-top: 28px;
-  padding-bottom: 28px;
+  padding-bottom: 180px;
+  display: flex;
 }
 
-.article-item {
-  padding: 28px 0;
+.article-list {
+  margin-right: 32px;
+  flex: 1;
+
+  &-loadmore {
+    margin-top: 72px;
+  }
+}
+
+.twitter-iframe {
+  margin-top: 28px;
+  width: 304px;
+  height: 476px;
+  background: $white;
 }
 </style>

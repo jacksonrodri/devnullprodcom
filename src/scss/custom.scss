@@ -5,10 +5,11 @@ $primary: #5EB4FF;
 $white: #FCFCFC;
 $grey-0: #F4F4F4;
 $grey-1: #CCCDCE;
-$grey-2: #C4C4C4;
+$grey-2: #9A9EA0;
 $grey-3: #707275;
 $grey-4: #36383A;
-$black: #121416;
+$dark: #121416;
+$bg-grey: #C4C4C4;
 
 .body-1 {
   font-family: Poppins;
@@ -17,6 +18,15 @@ $black: #121416;
   font-size: 16px;
   line-height: 20px;
   color: #000000;
+}
+
+.body-2 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: $grey-2;
 }
 
 .subtitle-1 {
@@ -45,7 +55,7 @@ $black: #121416;
   line-height: 80px;
   text-align: center;
   letter-spacing: -0.5px;
-  color: $black;
+  color: $dark;
   max-width: 864px;
   margin: 0 auto;
 }

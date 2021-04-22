@@ -363,7 +363,7 @@ export default {
 }
 
 .section3-bg {
-  background: $grey-2;
+  background: $bg-grey;
   opacity: .5;
   height: 100%;
   width: 100%;
