@@ -187,3 +187,7 @@ In addition to the stellar-core services, the XLM network integrates a client-fa
 ![code](@/assets/posts/xrp_vs_xlm_pt4/code.jpg)
 
 Both rippled and stellar-core are implmeneted C++, while Horizon is written in GoLang. Javascript libraries are provided as primary front-facing client interfaces to the network (for XRP <a href="https://github.com/ripple/ripple-lib">here</a> and for XLM <a href="https://github.com/stellar/js-stellar-sdk">here</a>) and libraries for many other languages are also available.
+
+<h3>Fin</h3>
+
+And that is it for our technical analysis of the XRP and XLM ledgers! We hope you enjoyed these articles! Be sure to check the Dev Null Productions' blog regularily in the future for more content including in-depth analysis of Blockchain technologies, development guides and tutorials, and information about our products and services. Until then... <b>stay awesome!</b>
