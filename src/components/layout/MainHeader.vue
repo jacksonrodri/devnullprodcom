@@ -1,19 +1,19 @@
 <template>
   <div id="main_header">
     <router-link to="/">
-      <img src="../assets/logo.svg" id="logo" />
+      <img src="@/assets/logo.svg" id="logo" />
     </router-link>
 
     <div v-if="mq_lt_lg">
       <img id="main_hamburger_open_icon"
-           src="../assets/hamburger.svg"
+           src="@/assets/hamburger.svg"
            @click="hamburger_visible = true"/>
 
       <div id="main_hamburger" v-show="hamburger_visible">
         <div id="hide_hamburger"
              @click="hamburger_visible = false">
           <img id="main_hamburger_close_icon"
-               src="../assets/x-white.svg" />
+               src="@/assets/x-white.svg" />
         </div>
 
         <MainNav hamburger @nav="hamburger_visible = false"/>

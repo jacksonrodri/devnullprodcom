@@ -1,7 +1,98 @@
+$blue-3: #2F7BBD;
+$blue-4: #172837;
 $primary-blue: #5EB4FF;
 $primary: #5EB4FF;
 $white: #FCFCFC;
 $grey-0: #F4F4F4;
 $grey-1: #CCCDCE;
+$grey-2: #C4C4C4;
+$grey-3: #707275;
+$grey-4: #36383A;
+$black: #121416;
+
+.body-1 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.subtitle-1 {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: $blue-3;
+}
+
+.caption {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: $grey-0;
+}
+
+.typography-h2 {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 80px;
+  text-align: center;
+  letter-spacing: -0.5px;
+  color: $black;
+  max-width: 864px;
+  margin: 0 auto;
+}
+
+.typography-h4 {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 40px;
+  letter-spacing: 0.5px;
+  color: $primary-blue;
+}
+
+.typography-h5 {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+
+.typography-h6 {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: $white;
+}
+
+.normal-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  color: $white;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: bold !important;
+  font-size: 14px !important;
+  line-height: 16px !important;
+}
 
 @import 'node_modules/bootstrap/scss/bootstrap';

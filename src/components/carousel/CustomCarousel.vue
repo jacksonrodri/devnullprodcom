@@ -11,8 +11,8 @@
       </div>
     </VueSlickCarousel>
     <div>
-      <img class="slick-icon slick-prev-icon" src="../assets/imgs/arrow_backward.svg" @click="showNext" />
-      <img class="slick-icon slick-next-icon" src="../assets/imgs/arrow_forward.svg" @click="showNext" />
+      <img class="slick-icon slick-prev-icon" src="@/assets/imgs/arrow_backward.svg" @click="showNext" />
+      <img class="slick-icon slick-next-icon" src="@/assets/imgs/arrow_forward.svg" @click="showNext" />
     </div>
   </div>
 </template>

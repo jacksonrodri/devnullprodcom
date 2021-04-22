@@ -52,7 +52,7 @@
 </template>
 
 <script>
-import MainLayout from './components/MainLayout'
+import MainLayout from '@/components/layout/MainLayout'
 //import TeamMember from './components/TeamMember'
 
 export default {
@@ -69,7 +69,7 @@ export default {
   width: 100%;
   min-height: 500px;
   padding-top: 165px;
-  background-image: url("./assets/conference-room.jpg");
+  background-image: url("~@/assets/conference-room.jpg");
   background-size: 100% 100%;
 }
 
@@ -77,7 +77,7 @@ export default {
 #main_layout.sm #title_wrapper,
 #main_layout.xs #title_wrapper{
   padding-top: 125px;
-  background-image: url("./assets/boardroom.jpg");
+  background-image: url("~@/assets/boardroom.jpg");
 }
 
 #title_wrapper h1{

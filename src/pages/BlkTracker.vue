@@ -4,12 +4,12 @@
       <div id="title_wrapper">
         <h1>Blockchain Transaction Tracker</h1>
 
-        <img src="./assets/products/blockchaintracker1.png" />
+        <img src="@/assets/products/blockchaintracker1.png" />
       </div>
 
       <div id="content">
         <div id="content1">
-          <img src="./assets/products/blockchaintracker2.png" />
+          <img src="@/assets/products/blockchaintracker2.png" />
         </div>
 
         <div id="content2">
@@ -56,7 +56,7 @@
 </template>
 
 <script>
-import MainLayout from './components/MainLayout'
+import MainLayout from '@/components/layout/MainLayout'
 
 export default {
   name: 'BlkTracker',
@@ -71,7 +71,7 @@ export default {
   width: 100%;
   min-height: 500px;
   padding-top: 100px;
-  background-image: url("./assets/geometric.jpg");
+  background-image: url("~@/assets/geometric.jpg");
   background-size: 100% 100%;
 }
 

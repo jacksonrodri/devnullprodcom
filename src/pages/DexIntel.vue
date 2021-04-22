@@ -4,12 +4,12 @@
       <div id="title_wrapper">
         <h1>Decentralized Exchange Intelligence</h1>
 
-        <img src="./assets/products/dex1.png" />
+        <img src="@/assets/products/dex1.png" />
       </div>
 
       <div id="content">
         <div id="content1">
-          <img src="./assets/products/dex2.png" />
+          <img src="@/assets/products/dex2.png" />
         </div>
 
         <div id="content2">
@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import MainLayout from './components/MainLayout'
+import MainLayout from '@/components/layout/MainLayout'
 
 export default {
   name: 'DexIntel',
@@ -58,7 +58,7 @@ export default {
   width: 100%;
   min-height: 500px;
   padding-top: 150px;
-  background-image: url("./assets/stock-exchange.jpg");
+  background-image: url("~@/assets/stock-exchange.jpg");
   background-size: 100% 100%;
 }
 

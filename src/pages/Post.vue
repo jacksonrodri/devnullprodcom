@@ -21,15 +21,15 @@
           <div id="share_this_post"><b>Share this Post:</b></div>
           <div id="share-icons">
             <a :href="'https://twitter.com/intent/tweet?url=' + url">
-              <img src="./assets/twitter.png" />
+              <img src="@/assets/twitter.png" />
             </a>
 
             <a :href="'https://www.facebook.com/sharer/sharer.php?u=' + url">
-              <img src="./assets/facebook.png" />
+              <img src="@/assets/facebook.png" />
             </a>
 
             <a :href="'https://www.linkedin.com/shareArticle?mini=true&url=' + url">
-              <img src="./assets/linkedin.png" />
+              <img src="@/assets/linkedin.png" />
             </a>
           </div>
         </div>
@@ -45,12 +45,12 @@
 </template>
 
 <script>
-import MainLayout  from './components/MainLayout'
-import TwitterFeed from './components/TwitterFeed'
-import RecentPosts from './components/RecentPosts'
-import HasPosts    from './mixins/HasPosts'
-import Posts       from './assets/posts'
-import config      from './config'
+import MainLayout  from '@/components/layout/MainLayout'
+import TwitterFeed from '@/components/TwitterFeed'
+import RecentPosts from '@/components/RecentPosts'
+import HasPosts    from '@/mixins/HasPosts'
+import Posts       from '@/assets/posts'
+import config      from '@/config'
 
 export default {
   name: 'Post',

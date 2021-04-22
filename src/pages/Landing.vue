@@ -8,12 +8,12 @@
       <div id="cards">
         <div class="left-card">
           <div>
-            <img src="./assets/imgs/Innvoation.svg" />
+            <img src="@/assets/imgs/Innvoation.svg" />
             <h5 class="title">Innovation.</h5>
             <p class="content">We developed first to market patented Blockchain tracker.</p>
           </div>
           <div>
-            <img src="./assets/imgs/reliable.svg" />
+            <img src="@/assets/imgs/reliable.svg" />
             <h5 class="title">Reliable & Excellence.</h5>
             <p class="content">With the solid track record, we deliver solutions rapidly for clients in various domain.</p>
           </div>
@@ -28,7 +28,7 @@
       <div id="mainContent">
         <div class="section1">
           <div class="section-wrapper">
-            <h4 class="section-header">
+            <h4 class="typography-h4 text-center">
               Design for convienient, built for scalibility. 
             </h4>
             <p class="section-header-description">
@@ -36,7 +36,7 @@
             </p>
             <div class="image-card d-flex">
               <div class="image-card__image">
-                <img src="./assets/imgs/img-homepage-p-btt.svg" />
+                <img src="@/assets/imgs/img-homepage-p-btt.svg" />
               </div>
               <div class='image-card__content'>
                 <h5>BT</h5>
@@ -46,7 +46,7 @@
             </div>
             <div class="image-card image-card-2 d-flex flex-row-reverse">
               <div class="image-card__image">
-                <img src="./assets/imgs/img-homepage-p-dei.svg" />
+                <img src="@/assets/imgs/img-homepage-p-dei.svg" />
               </div>
               <div class='image-card__content'>
                 <h5>XRP INTEL</h5>
@@ -55,16 +55,36 @@
               </div>
             </div>
             <div class="text-center">
-              <b-button variant="primary" class="text-white px-5 py-3">Lear more about our products</b-button>
+              <b-button variant="primary" class="normal-btn text-white px-5 py-3">Lear more about our products</b-button>
             </div>
           </div>
         </div>
         <div class="section2 carousel-section">
           <div class="section-wrapper">
-            <h4 class="section-header our-partner">
+            <h4 class="typography-h4 text-center our-partner">
               Our partners
             </h4>
             <CustomCarousel />
+          </div>
+        </div>
+        <div class="section3">
+          <div class="d-flex section-wrapper">
+            <h4 class="typography-h4">Consultancy & Collaboration</h4>
+            <div class="section-content">
+              <p class="body-1 mb-4">We are an engineering firm focused on delivering robust, reliable digital solutions. As experts in many innovative technologies and standards, Dev Null Productions is confident that we will deliver solutions for your needs in any digital domain. We operate both on a consultancy basis and offer premium subscription services to our products.</p>
+              <p class="subtitle-1">Industry we work with</p>
+              <ul class="list-inline mb-3">
+                <li v-for="(item, index) of collaborations" :key="index" class="typography-h5 mb-2">{{item}}</li>
+              </ul>
+              <div class="pt-4 lets-chat">
+                <p class="body-1">Got an idea?</p>
+                <b-button variant="primary" class="normal-btn text-white px-5 py-3">let's chat</b-button>
+              </div>
+            </div>
+          </div>
+          <div class="section3-bg">
+          </div>
+          <div class='line-deco'>
           </div>
         </div>
       </div>
@@ -87,11 +107,11 @@
 
       <div id="partners">
         <div class="partner">
-          <a href="https://ripple.com"><img src="./assets/partners/ripple.jpg" /></a>
+          <a href="https://ripple.com"><img src="@/assets/partners/ripple.jpg" /></a>
         </div>
 
         <div class="partner">
-          <a href="https://coventure.vc"><img src="./assets/partners/coventure.png" /></a>
+          <a href="https://coventure.vc"><img src="@/assets/partners/coventure.png" /></a>
         </div>
       </div>
     </div>-->
@@ -99,19 +119,29 @@
 </template>
 
 <script>
-import MainLayout from './components/MainLayout'
-import CustomCarousel from '@/components/CustomCarousel'
+import MainLayout from '@/components/layout/MainLayout'
+import CustomCarousel from '@/components/carousel/CustomCarousel'
 export default {
   name: 'Landing',
   components: {
     MainLayout,
     CustomCarousel
+  },
+  data() {
+    return {
+      collaborations: [
+        "Fintech",
+        "Blockchain",
+        "Data & Analytics",
+        "Network operation & Monitoring"
+      ]
+    }
   }
 }
 </script>
 
 <style scoped lang="scss">
-@import './scss/custom.scss';
+@import "@/scss/custom.scss";
 #landing{
   width: 100%;
 }
@@ -120,7 +150,7 @@ export default {
   width: 100%;
   min-height: 904px;
   padding-top: 34vh;
-  background-image: url("./assets/imgs/home-header-bg.png");
+  background-image: url("~@/assets/imgs/home-header-bg.png");
   background-position: center;
   background-size: cover;
   display: flex;
@@ -224,7 +254,7 @@ export default {
 
 #cards .right-card a:after {
   margin-left: 10px;
-  content: url("./assets/imgs/arrow-right.svg");
+  content: url("~@/assets/imgs/arrow-right.svg");
   width: 16px;
   height: 16px;
 }
@@ -241,17 +271,6 @@ export default {
 #mainContent .section1 .section-wrapper {
   max-width: 1188px;
   margin: 0 auto;
-}
-
-.section-header {
-  font-family: DM Sans;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 34px;
-  line-height: 40px;
-  color: $primary-blue;
-  text-align: center;
-  letter-spacing: 0.5px;
 }
 
 .section-header-description {
@@ -322,12 +341,6 @@ export default {
 }
 
 .section1 button {
-  font-family: DM Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
-  text-transform: uppercase;
   margin-bottom: 102px;
 }
 
@@ -343,6 +356,50 @@ export default {
 
 .our-partner {
   margin-bottom: 56px;
+}
+
+.section3 {
+  position: relative;
+}
+
+.section3-bg {
+  background: $grey-2;
+  opacity: .5;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+.line-deco {
+  background: url("~@/assets/imgs/line-deco.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 462px;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+.section3 .section-wrapper {
+  max-width: 1090px;
+  padding-top: 150px;
+  margin: 0 auto;
+}
+
+.section3 .section-wrapper h4 {
+  text-align: left;
+  width: 299px;
+}
+
+.section3 .section-wrapper .section-content {
+  flex: 1;
+}
+
+.section3 .lets-chat {
+  margin-bottom: 200px;
 }
 
 #content{

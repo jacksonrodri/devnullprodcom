@@ -44,8 +44,8 @@
 </template>
 
 <script>
-import MainLayout from './components/MainLayout'
-import HasPosts   from './mixins/HasPosts'
+import MainLayout from '@/components/layout/MainLayout'
+import HasPosts   from '@/mixins/HasPosts'
 
 export default {
   name: 'Blog',
