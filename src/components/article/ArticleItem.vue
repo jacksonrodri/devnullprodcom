@@ -1,5 +1,8 @@
 <template>
-  <div class="article-item">
+  <div
+    class="article-item"
+    @click="goArticleDetail"
+  >
     <div class="article-item-content">
       <p class="article-item-content--date body-2 mb-3">{{item.date}}</p>
       <h4 class="article-item-content--subject typography-h4 text-dark mb-2">{{item.subject}}</h4>
@@ -22,8 +25,14 @@
 export default {
   name: "ArticleItem",
   props: [
-    "item"
-  ]
+    "item",
+    "id"
+  ],
+  methods: {
+    goArticleDetail: function () {
+      this.$router.push(`/articles/${this.id}`)
+    }
+  }
 }
 </script>
 <style scoped lang="scss">

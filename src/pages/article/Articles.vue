@@ -10,8 +10,8 @@
                 v-for="(item, index) of getArticles"
                 :key="index"
                 :item="item"
-              >
-              </ArticleItem>
+                :id="index"
+              />
               <div class="text-center article-list-loadmore">
                 <b-button
                   variant="primary"

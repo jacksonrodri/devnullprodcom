@@ -38,6 +38,15 @@ $bg-grey: #C4C4C4;
   color: $blue-3;
 }
 
+.subtitle-2 {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: $primary-blue
+}
+
 .caption {
   font-family: Poppins;
   font-style: normal;
@@ -55,6 +64,17 @@ $bg-grey: #C4C4C4;
   line-height: 80px;
   text-align: center;
   letter-spacing: -0.5px;
+  color: $dark;
+  max-width: 864px;
+  margin: 0 auto;
+}
+
+.typography-h3 {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 54px;
   color: $dark;
   max-width: 864px;
   margin: 0 auto;
