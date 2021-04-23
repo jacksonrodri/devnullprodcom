@@ -1,33 +1,34 @@
-import Vue from 'vue'
+import Vue from "vue"
 
 import("../public/common.css")
-require('./mq')
+require("./mq")
 
 ///
 
-import BootstrapVue from 'bootstrap-vue'
+import BootstrapVue from "bootstrap-vue"
 
 Vue.use(BootstrapVue)
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+import "bootstrap/dist/css/bootstrap.css"
+import "bootstrap-vue/dist/bootstrap-vue.css"
 
 ///
 
-import VueRouter from 'vue-router'
+import VueRouter from "vue-router"
 Vue.use(VueRouter)
 
-import Landing          from './pages/Landing.vue'
-import About            from './pages/About.vue'
+import Landing          from "./pages/Landing.vue"
+import About            from "./pages/About.vue"
+import Product          from "./pages/Product.vue"
 
-import Articles         from './pages/article/Articles.vue'
-import ArticleDetail    from './pages/article/ArticleDetail.vue'
+import Articles         from "./pages/article/Articles.vue"
+import ArticleDetail    from "./pages/article/ArticleDetail.vue"
 
-import Blog             from './pages/Blog.vue'
-import Post             from './pages/Post.vue'
-import Posts            from './assets/posts'
+import Blog             from "./pages/Blog.vue"
+import Post             from "./pages/Post.vue"
+import Posts            from "./assets/posts"
 
-import DexIntel         from './pages/DexIntel.vue'
-import BlkTracker       from './pages/BlkTracker.vue'
+import DexIntel         from "./pages/DexIntel.vue"
+import BlkTracker       from "./pages/BlkTracker.vue"
 
 const posts =
   Posts.map(function(entry){
@@ -38,18 +39,20 @@ const posts =
   })
 
 const routes = [
-  { path: '/',                    component: Landing },
-  { path: '/about',               component: About },
+  { path: "/",                    component: Landing },
+  { path: "/about",               component: About },
 
-  { path: '/articles',            component: Articles },
-  { path: '/articles/:id',        component: ArticleDetail },
+  { path: "/our-product",               component: Product },
 
-  { path: '/blog',                component: Blog },
-  { path: '/post',                component: Post,
+  { path: "/articles",            component: Articles },
+  { path: "/articles/:id",        component: ArticleDetail },
+
+  { path: "/blog",                component: Blog },
+  { path: "/post",                component: Post,
                                   children : posts },
 
-  { path: '/products/dex',        component: DexIntel },
-  { path: '/products/tracker',    component: BlkTracker }
+  { path: "/products/dex",        component: DexIntel },
+  { path: "/products/tracker",    component: BlkTracker }
 ]
 
 const router = new VueRouter({
@@ -69,4 +72,4 @@ const router = new VueRouter({
 
 new Vue({
   router : router
-}).$mount('#app')
+}).$mount("#app")

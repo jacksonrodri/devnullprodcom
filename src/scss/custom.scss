@@ -11,6 +11,14 @@ $grey-4: #36383A;
 $dark: #121416;
 $bg-grey: #C4C4C4;
 
+.text-grey-4 {
+  color: $grey-4 !important;
+}
+
+.text-grey-3 {
+  color: $grey-3 !important;
+}
+
 .body-1 {
   font-family: Poppins;
   font-style: normal;
