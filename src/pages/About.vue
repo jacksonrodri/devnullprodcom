@@ -1,113 +1,159 @@
 <template>
   <MainLayout section="about">
     <div id="about">
-      <div id="title_wrapper">
-        <h1>About Us</h1>
+      <div class="section">
+        <div class="section-wrapper">
+          <h2 class="typography-h2 mb-5">Our Story</h2>
+          <p class="body-1 text-center our-story-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit euismod vel enim enim, vel adipiscing consectetur erat auctor. Habitant pellentesque dictum viverra lectus pharetra volutpat sodales phasellus. Semper ullamcorper viverra tempus, et. At ac sed scelerisque massa. Quisque sit ultrices ornare quis tortor in arcu. Tortor, ac a turpis phasellus. Feugiat dolor sed volutpat nullam eget sapien in lobortis. Interdum nisl ullamcorper integer sollicitudin. Tincidunt in eros porttitor ut volutpat, risus, mi.</p>
+          <div class="our-team">
+            <b-container>
+              <h4 class="typography-h4 text-center text-dark mb-4">Our team</h4>
+              <b-row>
+                <b-col v-for="item of [0, 1, 2, 3]" :key="item" md="3" cols="6">
+                  <div class="circle"></div>
+                  <p class="subtitle-2 text-center text-dark mb-1">FName,LName</p>
+                  <p class="subtitle-2 text-center mb-0">title</p>
+                </b-col>
+              </b-row>
+            </b-container>
+          </div>
+          <div class="contact">
+            <b-container>
+              <b-row>
+                <b-col md="6" cols="12">
+                  <div class="contact-content">
+                    <h4 class="typography-h4 text-dark mb-3">Contact Us</h4>
+                    <p class="body-1 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit euismod vel enim enim, vel adipiscing consectetur erat auctor.</p>
+                    <p class="body-1 mb-4">or email us at <a class="text-primary" href="mailto:devnullproductions@email.com">devnullproductions@email.com</a></p>
+                  </div>
+                </b-col>
+                <b-col md="6" cols="12">
+                  <div class="contact-form">
+                    <b-form @submit="onSubmit">
+                      <b-form-input
+                        id="input-2"
+                        class="mb-3 contact-form-input"
+                        v-model="form.name"
+                        placeholder="Name"
+                        required
+                      ></b-form-input>
+                      <b-form-input
+                        id="input-1"
+                        class="mb-3 contact-form-input"
+                        v-model="form.email"
+                        type="email"
+                        placeholder="Email"
+                        required
+                      ></b-form-input>
+                      <b-form-textarea
+                        id="textarea"
+                        class="mb-4 contact-form-textarea"
+                        v-model="form.message"
+                        placeholder="Message"
+                        rows="11"
+                      ></b-form-textarea>
+                      <b-button type="submit" variant="primary" class="normal-btn px-5 py-3 text-white w-100">Submit</b-button>
+                    </b-form>
+                  </div>
+                </b-col>
+              </b-row>
+            </b-container>
+          </div>
+        </div>
       </div>
-
-      <div id="content">
-        <p>Dev Null Productions is an engineering firm focused on delivering robust, reliable digital solutions. As experts in many innovative technologies and standards, Dev Null Productions is confident that we will deliver solutions for your needs in any digital domain. We operate both on a consultancy basis and offer premium subscription services to our products.</p>
-        <p><a href="mailto:devnullproductions@gmail.com">Contact us</a> for a quote on your project today!</p>
-      </div>
-
-      <!--<div id="team_title_wrapper">
-        <h1>Our Team</h1>
-      </div>
-
-      <div id="team">
-        <b-container>
-          <b-row :cols="mq_lt_lg ? 1 : 2">
-            <b-col>
-              <TeamMember name="Mo Morsi"
-                          title="CEO"
-                          photo="placeholder.png"
-                          bio="<p>As a former senior software engineer at RedHat and founder and vice-president of the SIG315 hackerspace, Mo has been on the forefront of the development of emerging technologies throughout his entire career.</p><p>Mo brings his many years of experience developing production solutions and managing teams to Dev Null Productions.</p>" />
-            </b-col>
-
-            <b-col>
-              <TeamMember name="Lamyae Kerzazi"
-                          title="COO"
-                          photo="placeholder.png"
-                          bio="<p>A Senior Analyst at Bristol Myers Squibb, and holding a Masters Degree in Economics, Lamyae provides the advanced operational and market insights needed to run operations at Dev Null Productions.</p>" />
-            </b-col>
-
-            <b-col>
-              <TeamMember name="Sarah Hussein"
-                          title="CMO"
-                          photo="placeholder.png"
-                          bio="<p>A former Coordinator at Exelon Energy Corporation, Sarah is responsible for Dev Null Productions’ client outreach and marketing campaigns.</p>" />
-            </b-col>
-
-            <b-col>
-              <TeamMember name="Jerry Pisagih"
-                          title="Lead Developer"
-                          photo="placeholder.png"
-                          bio="<p>With a multitude of production projects in many different domains under his belt, Jerry is versatile and adept at developing solutions using a plethora of technology stacks. No technical challenge is beyond his capabilities</p>" />
-            </b-col>
-          </b-row>
-        </b-container>
-      </div>-->
     </div>
   </MainLayout>
 </template>
 
 <script>
 import MainLayout from '@/components/layout/MainLayout'
-//import TeamMember from './components/TeamMember'
 
 export default {
   name: 'About',
   components: {
     MainLayout,
-    //TeamMember
+  },
+  data() {
+    return {
+      form: {
+        name: "",
+        email: "",
+        message: ""
+      }
+    }
+  },
+  methods: {
+    onSubmit: function () {
+
+    }
   }
 }
 </script>
 
-<style scoped>
-#title_wrapper{
-  width: 100%;
-  min-height: 500px;
-  padding-top: 165px;
-  background-image: url("~@/assets/conference-room.jpg");
-  background-size: 100% 100%;
+<style scoped lang="scss">
+@import "@/scss/custom.scss";
+#about {
+  background: $grey-0;
 }
 
-#main_layout.md #title_wrapper,
-#main_layout.sm #title_wrapper,
-#main_layout.xs #title_wrapper{
-  padding-top: 125px;
-  background-image: url("~@/assets/boardroom.jpg");
+#about .section {
+  padding-top: 155px;
+  padding-bottom: 160px;
 }
 
-#title_wrapper h1{
-  text-align: center;
-  color: black;
-  font-family: Lora;
+#about .section-wrapper {
+  max-width: 884px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-#main_layout.md #title_wrapper h1,
-#main_layout.sm #title_wrapper h1,
-#main_layout.xs #title_wrapper h1{
-  color: white;
+.our-team {
+  margin-bottom: 200px;
 }
 
-#content{
-  height: 100%;
-  width: 80%;
-  margin: auto;
-  padding-top: 50px;
+.our-story-content {
+  margin-bottom: 100px;
 }
 
-#content p{
-  font-family: MavenPro;
-  text-align: center;
+.circle {
+  max-width: 100%;
+  padding-top: 100%;
+  width: 192px;
+  border-radius: 100%;
+  background: $grey-1;
+  margin: 24px auto 12px;
+
+  @media screen and (max-width: 767px) {
+    padding-top: initial;
+    height: 192px;
+  }
+
+  @media screen and (max-width: 575px) {
+    width: 146px;
+    height: 146px;
+  }
+
+  @media screen and (max-width: 400px) {
+    width: 100%;
+    padding-top: 100%;
+    height: initial;
+  }
 }
 
-#team_title_wrapper h1{
-  margin-top: 50px;
-  margin-bottom: 50px;
-  text-align: center;
-  font-family: Lora;
+.contact {
+  &-form {
+    &-input {
+      height: 72px;
+      border: 1px solid $grey-1;
+      background: $white;
+    }
+
+    &-textarea {
+      min-height: 296px;
+      border: 1px solid $grey-1;
+      background: $white;
+    }
+  }
 }
 </style>
