@@ -60,6 +60,7 @@
             </b-container>
           </div>
         </div>
+        <div class="linear-gradient"></div>
       </div>
     </div>
   </MainLayout>
@@ -102,18 +103,19 @@ export default {
 }
 
 #about .section-wrapper {
-  max-width: 884px;
+  max-width: 914px;
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
 }
 
 .our-team {
-  margin-bottom: 200px;
+  margin-bottom: 200px;  
 }
 
 .our-story-content {
   margin-bottom: 100px;
+  padding: 0 15px;
 }
 
 .circle {
@@ -155,5 +157,19 @@ export default {
       background: $white;
     }
   }
+  position: relative;
+  z-index: 1;
+}
+
+.linear-gradient {
+  position: absolute;
+  width: 100%;
+  height: 749.12px;
+  left: 0px;
+  bottom: -175px;
+
+  background: linear-gradient(63.72deg, #4C96D7 23.81%, #0E5696 93.54%);
+  opacity: 0.1;
+  transform: matrix(1, 0.16, 0, -1.1, 0, 0);
 }
 </style>

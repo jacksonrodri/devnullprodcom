@@ -54,5 +54,6 @@ export default {
 
 #main_footer_container{
   width: 100%;
+  position: relative;
 }
 </style>
