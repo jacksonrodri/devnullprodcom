@@ -1,31 +1,29 @@
 <template>
   <nav id="nav">
     <ul>
-      <li><router-link to="/">Home</router-link></li>
-
       <li>
-        <b-dropdown id="products" :no-caret="mq_lt_lg" :offset="mq_lt_lg ? -25 : 0">
-          <template v-slot:button-content>
-            Products
-          </template>
-
-          <b-dropdown-item>
-            <router-link to="/products/tracker">
-              Blockchain Tracker
-            </router-link>
-          </b-dropdown-item>
-
-          <b-dropdown-item>
-            <router-link to="/products/dex">
-              DEX Intel
-            </router-link>
-          </b-dropdown-item>
-        </b-dropdown>
+        <router-link :class="{'text-white': !customNavbar, 'text-dark': customNavbar}" to="/">
+          Home
+        </router-link>
       </li>
 
-      <li><router-link to="/blog">Blog</router-link>
+      <li>
+        <router-link :class="{'text-white': !customNavbar, 'text-dark': customNavbar}" to="/our-product">
+          Our Product
+        </router-link>
+      </li>
 
-      <li><router-link to="/about">About Us</router-link></li>
+      <li>
+        <router-link :class="{'text-white': !customNavbar, 'text-dark': customNavbar}" to="/articles">
+          Articles
+        </router-link>
+      </li>
+
+      <li>
+        <router-link :class="{'text-white': !customNavbar, 'text-dark': customNavbar}" to="/about">
+          About Us
+        </router-link>
+      </li>
     </ul>
   </nav>
 </template>
@@ -35,19 +33,19 @@ export default {
   name: 'MainNav',
 
   props : {
-    hamburger : Boolean
+    hamburger: Boolean,
+    customNavbar: Boolean,
   }
 }
 </script>
 
-<style scoped>
-#nav{
-  flex-basis: 25%;
-  margin-right: 25px;
-  font-family: MavenPro;
+<style scoped lang="scss">
+@import "@/scss/custom.scss";
+#nav {
+  align-items: center;
 }
 
-#main_layout.md #nav{
+#main_layout.md #nav {
   flex-basis: 40%;
 }
 
@@ -60,6 +58,7 @@ export default {
   display: flex;
   justify-content: space-between;
   padding-left: 0;
+  margin-bottom: 0;
 }
 
 #main_hamburger #nav ul{
@@ -69,7 +68,11 @@ export default {
 
 #nav li{
   list-style-type: none;
-  color: white;
+  padding: 0 32px;
+
+  @media screen and (max-width: 1199px) {
+    padding: 0 28px;
+  }
 }
 
 #main_hamburger #nav li,
@@ -84,8 +87,26 @@ export default {
 }
 
 #nav a{
-  color: white;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
   text-decoration: none;
+  color: $white;
+}
+
+.router-link-exact-active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:after {
+    content: url("~@/assets/imgs/link_active.svg");
+    width: 8px;
+    height: 8px;
+  }
 }
 </style>
 

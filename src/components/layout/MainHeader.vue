@@ -1,7 +1,11 @@
 <template>
-  <div id="main_header">
+  <div
+    id="main_header"
+    :class="{ 'hidden-navbar': !showNavbar, 'custom-navbar': customNavbar }"
+  >
     <router-link to="/">
-      <img src="@/assets/logo.svg" id="logo" />
+      <img v-if="customNavbar" src="@/assets/imgs/logo_wordmark_black.svg" id="logo" />
+      <img v-else src="@/assets/logo.svg" id="logo" />
     </router-link>
 
     <div v-if="mq_lt_lg">
@@ -16,11 +20,12 @@
                src="@/assets/x-white.svg" />
         </div>
 
-        <MainNav hamburger @nav="hamburger_visible = false"/>
+        <MainNav :customNavbar="customNavbar" hamburger @nav="hamburger_visible = false"/>
       </div>
     </div>
 
-    <MainNav v-else />
+    <MainNav :customNavbar="customNavbar" v-else />
+    <b-button v-if="!mq_lt_lg" class="normal-btn px-5 py-3 mb-0 text-white contact-us" variant="primary">contact us</b-button>
   </div>
 </template>
 
@@ -36,24 +41,63 @@ export default {
 
   data : function(){
     return {
-      hamburger_visible : false
-    };
+      hamburger_visible : false,
+      showNavbar: true,
+      lastScrollPosition: 0,
+      scrollValue: 0,
+      customNavbar: false,
+    }
+  },
+  mounted () {
+    this.lastScrollPosition = window.pageYOffset
+    window.addEventListener('scroll', this.onScroll)
+    const viewportMeta = document.createElement('meta')
+    viewportMeta.name = 'viewport'
+    viewportMeta.content = 'width=device-width, initial-scale=1'
+    document.head.appendChild(viewportMeta)
+  },
+  beforeDestroy () {
+    window.removeEventListener('scroll', this.onScroll)
+  },
+  methods: {
+    onScroll () {
+      if (window.pageYOffset < 0) {
+        return
+      }
+      if (Math.abs(window.pageYOffset - this.lastScrollPosition) < 60) {
+        return
+      }
+      this.customNavbar = window.pageYOffset > 60
+      this.showNavbar = window.pageYOffset < this.lastScrollPosition
+      this.lastScrollPosition = window.pageYOffset
+    }
   }
 }
 </script>
 
-<style scoped>
-#main_header{
+<style scoped lang="scss">
+@import "@/scss/custom.scss";
+#main_header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 10;
+  padding: 0 64px;
+  transform: translate3d(0, 0, 0);
+  transition: 0.1s all ease-out;
+
+  @media screen and (max-width: 1199px) {
+    padding: 0 32px;
+  }
+}
+
+#main_header.hidden-navbar {
+  transform: translate3d(0, -100%, 0);
 }
 
 #logo{
   height: 100px;
   width: 100px;
-  margin-left: 15px;
 }
 
 #main_hamburger_open_icon{
@@ -85,5 +129,16 @@ export default {
 #hide_hamburger{
   cursor: pointer;
   text-align: right;
+}
+
+.custom-navbar {
+  background: $white;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+
+  #logo{
+    height: 48px;
+    width: 48px;
+  }
 }
 </style>
