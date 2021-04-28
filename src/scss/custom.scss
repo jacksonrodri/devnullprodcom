@@ -19,6 +19,14 @@ $bg-grey: #C4C4C4;
   color: $grey-3 !important;
 }
 
+.text-grey-2 {
+  color: $grey-2 !important;
+}
+
+.text-grey-1 {
+  color: $grey-1 !important;
+}
+
 .body-1 {
   font-family: Poppins;
   font-style: normal;
@@ -62,6 +70,23 @@ $bg-grey: #C4C4C4;
   font-size: 12px;
   line-height: 14px;
   color: $grey-0;
+}
+
+.typography-h1 {
+  text-align: center;
+  color: $white;
+  font-family: DM Sans;
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 80px;
+  max-width: 894px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media screen and (max-width: 991px) {
+    font-size: 48px;
+    line-height: 48px;
+  }
 }
 
 .typography-h2 {

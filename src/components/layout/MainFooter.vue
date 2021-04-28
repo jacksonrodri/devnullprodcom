@@ -5,7 +5,7 @@
         <img src="@/assets/imgs/logo_wordmark.svg" />
       </a>
       <div class="footer-nav">
-        <ul class="list-inline d-inline-flex align-items-center footer-navbar">
+        <ul class="list-inline d-flex align-items-center footer-navbar">
           <li v-for="(item, index) of menu" :key="index" class="footer-navbar-item">
             <a class="typography-h6" href="item.link">
               {{ item.name }}
@@ -54,18 +54,20 @@ export default {
 }
 
 .footer-nav {
-  margin-top: 45px;
-  margin-bottom: 45px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .footer-navbar {
   padding-left: 20px;
   padding-right: 20px;
   margin-bottom: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .footer-navbar-item {
+    padding: 20px;
+  }
 }
 
-.footer-navbar-item {
-  padding-left: 20px;
-  padding-right: 20px;
-}
 </style>

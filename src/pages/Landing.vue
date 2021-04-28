@@ -2,7 +2,7 @@
   <MainLayout section="landing">
     <div id="landing">
       <div id="title_wrapper">
-        <h1>Engineering Solutions for The Digital Age</h1>
+        <h1 class="typography-h1">Engineering Solutions for The Digital Age</h1>
       </div>
 
       <div id="cards">
@@ -39,23 +39,27 @@
                 <img src="@/assets/imgs/img-homepage-p-btt.svg" />
               </div>
               <div class='image-card__content'>
-                <h5>BT</h5>
-                <h4>Blockchain Transaction Tracker</h4>
-                <p>Our transaction tracking suite (patent pending) is the perfect solution to receive email, text message, and webhook alerts on Blockchain activity with no fuss.</p>
+                <div>
+                  <h5 class="typograph-h5">BT</h5>
+                  <h4 class="typography-h4 text-white">Blockchain Transaction Tracker</h4>
+                </div>
+                <p class="body-1 text-grey-1">Our transaction tracking suite (patent pending) is the perfect solution to receive email, text message, and webhook alerts on Blockchain activity with no fuss.</p>
               </div>
             </div>
-            <div class="image-card image-card-2 d-flex flex-row-reverse">
+            <div class="image-card image-card-2 d-flex">
               <div class="image-card__image">
                 <img src="@/assets/imgs/img-homepage-p-dei.svg" />
               </div>
               <div class='image-card__content'>
-                <h5>XRP INTEL</h5>
-                <h4>Decentralized Exchange Intelligence</h4>
-                <p>Our DEX Intelligence suite analyzes several major markets and delivers consistent, reliable stats.</p>
+                <div>
+                  <h5 class="typograph-h5">XRP INTEL</h5>
+                  <h4 class="typography-h4 text-white">Decentralized Exchange Intelligence</h4>
+                </div>
+                <p class="body-1 text-grey-1">Our DEX Intelligence suite analyzes several major markets and delivers consistent, reliable stats.</p>
               </div>
             </div>
             <div class="text-center">
-              <b-button variant="primary" class="normal-btn text-white px-5 py-3">Lear more about our products</b-button>
+              <b-button variant="primary" class="normal-btn text-white px-4 px-md-5 py-3">Lear more about our products</b-button>
             </div>
           </div>
         </div>
@@ -155,33 +159,93 @@ export default {
   background-size: cover;
   display: flex;
   justify-content: center;
-}
 
-#title_wrapper h1{
-  text-align: center;
-  color: $white;
-  font-family: DM Sans;
-  font-weight: bold;
-  font-size: 72px;
-  line-height: 80px;
-  max-width: 864px;
+  @media screen and (max-width: 767px) {
+    min-height: 100vh;
+  }
 }
 
 #cards {
   max-width: 1314px;
   margin: 0 auto;
   position: relative;
+
+  .left-card {
+    background-color: $primary-blue;
+    padding: 61px 114px;
+    position: absolute;
+    display: flex;
+    max-width: 866px;
+    z-index: 1;
+    bottom: -178px;
+
+    @media screen and (max-width: 1218px) {
+      position: relative;
+      bottom: 0;
+      padding: 30px 24px;
+    }
+
+    @media screen and (max-width: 991px) {
+      max-width: 100%;
+    }
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+
+      & > div {
+        max-width: 303px;
+      }
+
+      & > div:first-child {
+        margin-bottom: 66px;
+      }
+
+      & > div:nth-child(2) {
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  .right-card {
+    background: #2F7BBD;
+    max-width: 448px;
+    position: absolute;
+    right: 0;
+    bottom: -212px;
+    z-index: 1;
+
+    @media screen and (max-width: 1218px) {
+      position: relative;
+      bottom: -34px;
+
+      .right-card-wrapper {
+        padding: 30px 24px 60px 30px;
+        max-width: 360px;
+      }
+    }
+
+    @media screen and (max-width: 991px) {
+      max-width: 100%;
+      bottom: 0;
+    }
+  }
+
+  @media screen and (max-width: 1218px) {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    transform: translateY(-150px);
+    z-index: 1;
+  }
+
+  @media screen and (max-width: 991px) {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transform: translateY(0);
+  }
 }
 
-#cards .left-card {
-  background-color: $primary-blue;
-  padding: 61px 114px;
-  position: absolute;
-  display: flex;
-  max-width: 866px;
-  z-index: 1;
-  bottom: -178px;
-}
 
 #cards .left-card > div:first-child {
   margin-right: 32px;
@@ -209,15 +273,6 @@ export default {
   line-height: 20px;
   color: $white;
   margin-bottom: 0;
-}
-
-#cards .right-card {
-  background: #2F7BBD;
-  max-width: 448px;
-  position: absolute;
-  right: 0;
-  bottom: -212px;
-  z-index: 1;
 }
 
 #cards .right-card-wrapper {
@@ -266,11 +321,17 @@ export default {
 #mainContent .section1 {
   background: linear-gradient(121.51deg, #172837 13.32%, #3377B3 87.49%);
   padding-top: 340px;
+
+  @media screen and (max-width: 991px) {
+    padding-top: 118px;
+  }
 }
 
 #mainContent .section1 .section-wrapper {
-  max-width: 1188px;
+  max-width: 1136px;
   margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .section-header-description {
@@ -288,56 +349,88 @@ export default {
 
 .image-card {
   color: $white;
-  margin-top: 50px;
+  margin-top: 90px;
+
+  .image-card__image {
+    img {
+      @media screen and (max-width: 1199px) {
+        width: 500px;
+      }
+  
+      @media screen and (max-width: 991px) {
+        width: 400px;
+      }
+
+      @media screen and (max-width: 767px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .image-card__content {
+    margin-top: 50px;
+    padding-left: 40px;
+    padding-right: 0;
+
+    h5 {
+      width: 104px;
+      height: 104px;
+      padding: 20px;
+      text-align: center;
+      background: #1C84DE;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    h4 {
+      margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 1199px){
+      & {
+        margin-top: 0;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      padding: 0;
+
+      & > div {
+        display: flex;
+        max-width: 330px;
+        margin-top: 40px;
+
+        & > h4 {
+          flex: 1;
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
 }
 
-.image-card__content {
-  margin-top: 50px;
-  padding-right: 50px;
-  padding-left: 0;
-}
 
-.image-card:last-child {
-  margin-top: 80px;
-  margin-bottom: 60px;
-}
+.image-card-2 {
+  margin-top: 160px;
+  margin-bottom: 100px;
+  flex-direction: row-reverse;
 
-.image-card-2 .image-card__content {
-  padding-left: 50px;
-  padding-right: 0;
-}
+  & .image-card__content {
+    padding-right: 40px;
+    padding-left: 0;
+  }
 
-.image-card__content h5 {
-  width: 104px;
-  height: 104px;
-  padding: 20px;
-  text-align: center;
-  background: #1C84DE;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 24px;
-}
-
-.image-card__content h4 {
-  font-family: DM Sans;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 34px;
-  line-height: 40px;
-  letter-spacing: 0.5px;
-  color: $white;
-  margin-bottom: 20px;
-}
-
-.image-card__content p {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
-  color: #CCCDCE;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    margin-top: 105px;
+  }
 }
 
 .section1 button {
@@ -347,15 +440,27 @@ export default {
 .section2 {
   background-color: $white;
   padding: 56px;
+
+  @media screen and (max-width: 640px) {
+    padding: 56px 0;
+  }
 }
 
 .section2 .section-wrapper {
   max-width: 1108px;
   margin: 0 auto;
+
+  @media screen and (max-width: 640px) {
+    margin-bottom: 70px;
+  }
 }
 
 .our-partner {
   margin-bottom: 56px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 40px;
+  }
 }
 
 .section3 {
@@ -384,9 +489,16 @@ export default {
 }
 
 .section3 .section-wrapper {
-  max-width: 1090px;
+  max-width: 1138px;
   padding-top: 150px;
   margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    padding-top: 70px;
+  }
 }
 
 .section3 .section-wrapper h4 {
@@ -400,6 +512,10 @@ export default {
 
 .section3 .lets-chat {
   margin-bottom: 200px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 130px;
+  }
 }
 
 #content{
