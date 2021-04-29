@@ -17,7 +17,7 @@
               </b-row>
             </b-container>
           </div>
-          <div class="contact">
+          <div class="contact" id="contactUs">
             <b-container>
               <b-row>
                 <b-col md="6" cols="12">
@@ -100,6 +100,11 @@ export default {
 #about .section {
   padding-top: 155px;
   padding-bottom: 160px;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 125px;
+    padding-bottom: 145px;
+  }
 }
 
 #about .section-wrapper {
@@ -110,7 +115,7 @@ export default {
 }
 
 .our-team {
-  margin-bottom: 200px;  
+  margin-bottom: 160px;
 }
 
 .our-story-content {
@@ -144,6 +149,8 @@ export default {
 }
 
 .contact {
+  padding-top: 40px;
+  
   &-form {
     &-input {
       height: 72px;

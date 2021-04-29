@@ -9,9 +9,18 @@
     </router-link>
 
     <div v-if="mq_lt_lg">
-      <img id="main_hamburger_open_icon"
-           src="@/assets/hamburger.svg"
-           @click="hamburger_visible = true"/>
+      <img
+        v-if="!customNavbar"
+        id="main_hamburger_open_icon"
+        src="@/assets/imgs/white_ham_menu.svg"
+        @click="hamburger_visible = true"
+      />
+      <img
+        v-else
+        id="main_hamburger_open_icon"
+        src="@/assets/imgs/black_ham_menu.svg"
+        @click="hamburger_visible = true"
+      />
 
       <div id="main_hamburger" v-show="hamburger_visible">
         <div id="hide_hamburger"
@@ -25,7 +34,10 @@
     </div>
 
     <MainNav :customNavbar="customNavbar" v-else />
-    <b-button v-if="!mq_lt_lg" class="normal-btn px-5 py-3 mb-0 text-white contact-us" variant="primary">contact us</b-button>
+    <b-button
+      v-if="!mq_lt_lg" class="normal-btn px-5 py-3 mb-0 text-white contact-us" variant="primary"
+      href="/about#contactUs"
+    >contact us</b-button>
   </div>
 </template>
 
@@ -101,13 +113,13 @@ export default {
 }
 
 #main_hamburger_open_icon{
-  margin-right: 25px;
-  width: 25px;
+  // margin-right: 25px;
+  // width: 25px;
   cursor: pointer;
 }
 
 #main_layout.xs #main_hamburger_open_icon{
-  width: 20px;
+  // width: 20px;
 }
 
 #main_hamburger{
@@ -137,8 +149,8 @@ export default {
   padding-bottom: 8px !important;
 
   #logo{
-    height: 48px;
-    width: 48px;
+    height: 40px;
+    width: 40px;
   }
 }
 </style>

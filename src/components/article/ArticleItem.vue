@@ -17,6 +17,7 @@
       </div>
     </div>
     <div class="article-item-image">
+      <img src="@/assets/imgs/img-homepage-p-dei.svg">
     </div>
   </div>
 </template>
@@ -61,6 +62,25 @@ export default {
     height: 176px;
     background: $grey-1;
     border-radius: 4px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+
+    &-content {
+      margin-right: 0;
+    }
+
+    &-image {
+      width: auto;
+      height: auto;
+    }
   }
 }
 </style>

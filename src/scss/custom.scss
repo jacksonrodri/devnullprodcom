@@ -100,6 +100,11 @@ $bg-grey: #C4C4C4;
   color: $dark;
   max-width: 864px;
   margin: 0 auto;
+
+  @media screen and (max-width: 767px) {
+    font-size: 48px;    
+    line-height: 48px;
+  }
 }
 
 .typography-h3 {
@@ -111,6 +116,11 @@ $bg-grey: #C4C4C4;
   color: $dark;
   max-width: 864px;
   margin: 0 auto;
+
+  @media screen and (max-width: 767px) {
+    font-size: 36px;
+    line-height: 44px;
+  }
 }
 
 .typography-h4 {
@@ -121,6 +131,10 @@ $bg-grey: #C4C4C4;
   line-height: 40px;
   letter-spacing: 0.5px;
   color: $primary-blue;
+
+  @media screen and (max-width: 767px) {
+    font-size: 32px;
+  }
 }
 
 .typography-h5 {

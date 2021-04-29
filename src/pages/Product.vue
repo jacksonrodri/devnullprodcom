@@ -5,7 +5,7 @@
         <div class="blue-gradient-dark"></div>
         <div class="section-wrapper">
           <h2 class="typography-h2 text-white">some headline about product</h2>
-          <div class="section-container d-flex">
+          <div class="section-container section-container-1 d-flex">
             <div class="filter-content">
               <h4 class="typography-h4 mb-3">Blockchain Transaction Tracker</h4>
               <p class="body-1 m-b-38">
@@ -21,7 +21,7 @@
               </p>
             </div>
             <div class="filter-image">
-              <img src="@/assets/imgs/filter.svg" />
+              <img src="@/assets/imgs/img-product-btt-notification.svg" />
             </div>
           </div>
           <div class="section-container section-container-2 d-flex">
@@ -33,10 +33,10 @@
             </div>
           </div>
           <div class="section-container section-container-3 d-flex">
-            <div>
-              <img src="@/assets/imgs/graph.svg" />
+            <div class="chart-image">
+              <img src="@/assets/imgs/img-product-dei-chart.svg" />
             </div>
-            <div class="">
+            <div class="chart-content">
               <h4 class="typography-h4 mb-3">Decentralized Exchange Intelligence</h4>
               <p class="body-1">
                 DEX Intelligence suite analyzes several major markets and delivers consistent, reliable stats.<br /><br />
@@ -108,6 +108,11 @@ export default {
 #product .section {
   padding-top: 314px;
   padding-bottom: 100px;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 224px;
+    padding-bottom: 100px;
+  }
 }
 
 #product .section-wrapper {
@@ -118,6 +123,21 @@ export default {
   z-index: 1;
   position: relative;
   overflow: hidden;
+
+  h2 {
+    margin-bottom: 239px;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding-left: 24px;
+    padding-right: 24px;
+
+    h2 {
+      margin-bottom: 120px;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
 }
 
 .blue-gradient-dark {
@@ -128,10 +148,11 @@ export default {
   height: 803.5px;
   left: 0;
   top: -170px;
-}
 
-#product .section-wrapper h2 {
-  margin-bottom: 190px;
+  @media screen and (max-width: 767px) {
+    height: 678px;
+    top: -120px;    
+  }
 }
 
 .linear-gradient {
@@ -146,20 +167,45 @@ export default {
   transform: matrix(1, 0.16, 0, -1.1, 0, 0);
 }
 
-.m-b-38 {
-  margin-bottom: 38px;
-}
+.section-container-1 {
+  flex-direction: row;
 
-.filter-content {
-  margin-top: 120px;
-}
+  .filter-content {
+    margin-top: 70px;
+    max-width: 548px;
+    margin-right: 50px;
+  }
 
-.filter-image {
-  transform: translateX(50px);
-}
+  .filter-image {
+    text-align: right;
+    flex: 1;
+  }
 
-.learn-more {
-  width: 280px;
+  @media screen and (max-width: 991px) {
+    .filter-content {
+      margin-top: 0;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column-reverse;
+
+    .filter-content {
+      margin-top: 50px;
+      margin-right: 0;
+    }
+
+    .filter-image {
+      text-align: center;
+      padding-left: 8px;
+      padding-right: 8px;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
 }
 
 .section-container-2 {
@@ -177,10 +223,63 @@ export default {
       margin-right: 56px;
     }
   }
+
+  @media screen and (max-width: 767px) {
+    margin-top: 70px;
+    margin-bottom: 70px;
+
+    .circle-image {
+      padding: 14px;
+
+      img {
+        width: 96px;
+        height: 96px;
+      }
+
+      &:first-child {
+        margin-right: 28px;
+      }
+    }
+  }
 }
 
 .section-container-3 {
-  transform: translateX(-50px);
+  flex-direction: row;
+
+  .chart-image {
+    margin-right: 56px;
+  }
+
+  @media screen and (max-width: 991px) {
+    .chart-image {
+      margin-right: 20px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+
+    .chart-image {
+      margin-right: 0;
+      text-align: center;
+      margin-bottom: 80px;
+      padding-left: 8px;
+      padding-right: 8px;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+.m-b-38 {
+  margin-bottom: 38px;
+}
+
+.learn-more {
+  width: 280px;
 }
 
 .industry {
@@ -191,6 +290,7 @@ export default {
     padding: 72px 32px;
     margin: 0 auto;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
 
@@ -203,6 +303,16 @@ export default {
         width: 24px;
         height: 24px;
         margin-left: 8px;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      padding: 62px 24px;
+      align-items: flex-start;
+      flex-direction: column;
+
+      & > a {
+        margin-top: 20px;
       }
     }
   }

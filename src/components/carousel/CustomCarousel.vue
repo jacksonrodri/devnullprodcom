@@ -36,6 +36,7 @@
           "slidesToShow": 4,
           "slidesToScroll": 2,
           "touchThreshold": 5,
+          "arrows": false,
           "responsive": [
             {
               "breakpoint": 1992,
@@ -111,5 +112,9 @@
     top: initial;
     left: calc(50% - 80px);
   }
+}
+
+.slick-arrow {
+  display: none;
 }
 </style>
