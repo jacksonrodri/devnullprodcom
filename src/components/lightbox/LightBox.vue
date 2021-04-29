@@ -30,7 +30,8 @@ export default {
     return {
       items: [
         {
-          src: 'https://www.youtube.com/embed/THZZd3693AM?autoplay=1',
+          src: 'https://www.youtube.com/embed/THZZd3693AM',
+          autoplay: true
         },
       ],
       index: null
