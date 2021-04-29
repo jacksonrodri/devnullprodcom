@@ -3,14 +3,14 @@
     id="main_header"
     :class="{ 'hidden-navbar': !showNavbar, 'custom-navbar': customNavbar }"
   >
-    <router-link to="/">
-      <img v-if="customNavbar || isWhiteBG" src="@/assets/imgs/logo_wordmark_black.svg" id="logo" />
+    <router-link to="/" :class="{ 'hamburger_logo':hamburger_visible }">
+      <img v-if="(customNavbar || isWhiteBG) && !hamburger_visible" src="@/assets/imgs/logo_wordmark_black.svg" id="logo" />
       <img v-else src="@/assets/imgs/logo_wordmark_white.svg" id="logo" />
     </router-link>
 
     <div v-if="mq_lt_lg">
       <img
-        v-if="!customNavbar"
+        v-if="(!customNavbar && !isWhiteBG)"
         id="main_hamburger_open_icon"
         src="@/assets/imgs/white_ham_menu.svg"
         @click="hamburger_visible = true"
@@ -30,7 +30,6 @@
         </div>
 
         <MainNav
-          :customNavbar="customNavbar"
           hamburger
           @nav="hamburger_visible = false"
         />
@@ -122,16 +121,11 @@ export default {
   width: 80px;
   margin-top: 10px;
   margin-bottom: 10px;
-}
 
-#main_hamburger_open_icon{
-  // margin-right: 25px;
-  // width: 25px;
-  cursor: pointer;
-}
-
-#main_layout.xs #main_hamburger_open_icon{
-  // width: 20px;
+  @media screen and (max-width: 767px) {
+    width: 72px;
+    height: 72px;
+  }
 }
 
 #main_hamburger{
@@ -142,17 +136,34 @@ export default {
   bottom: 0;
   z-index: 20;
 
-  background-color: blue;
+  background-color: $blue-4;
   padding: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  #main_hamburger_open_icon{
+    cursor: pointer;
+  }
+
+  #main_hamburger_close_icon{
+    width: 25px;
+  }
+
+  #nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
-#main_hamburger_close_icon{
-  width: 25px;
-}
 
 #hide_hamburger{
   cursor: pointer;
-  text-align: right;
+  position: absolute;
+  right: 32px;
+  top: 28px;
 }
 
 .custom-navbar {
@@ -160,9 +171,18 @@ export default {
   padding-top: 8px !important;
   padding-bottom: 8px !important;
 
-  #logo{
+  #logo {
     height: 40px;
     width: 40px;
+  }
+}
+
+.hamburger_logo {
+  z-index: 22;
+
+  #logo {
+    width: 72px;
+    height: 72px;
   }
 }
 </style>

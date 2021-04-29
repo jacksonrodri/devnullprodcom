@@ -79,8 +79,9 @@ export default {
 #main_hamburger #nav li,
 #main_hamburger #nav li,
 #main_hamburger #nav li{
-  font-size: 3rem;
   text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #main_hamburger #products li{
