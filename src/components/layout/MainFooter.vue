@@ -5,18 +5,38 @@
         <img src="@/assets/imgs/logo_wordmark.svg" />
       </a>
       <div class="footer-nav">
-        <ul class="list-inline d-flex align-items-center footer-navbar">
-          <li v-for="(item, index) of menu" :key="index" class="footer-navbar-item">
-            <a class="typography-h6" href="item.link">
-              {{ item.name }}
-            </a>
-          </li>
-          <li>
-            <a class="typography-h6" href="https://twitter.com/DevNullProd">
-              <img src="@/assets/twitter.png" />
-            </a>
-          </li>
-        </ul>
+        <nav id="nav">
+          <ul class="list-inline d-flex align-items-center footer-navbar">
+            <li class="footer-navbar-item">
+              <router-link class="typography-h6 text-white" to="/">
+                Home
+              </router-link>
+            </li>
+
+            <li class="footer-navbar-item">
+              <router-link class="typography-h6 text-white" to="/our-product">
+                Our Product
+              </router-link>
+            </li>
+
+            <li class="footer-navbar-item">
+              <router-link class="typography-h6 text-white" to="/articles">
+                Articles
+              </router-link>
+            </li>
+
+            <li class="footer-navbar-item">
+              <router-link class="typography-h6 text-white" to="/about">
+                About Us
+              </router-link>
+            </li>
+            <li style="padding: 15px 0;">
+              <a class="typography-h6" href="https://twitter.com/DevNullProd">
+                <img src="@/assets/twitter.png" />
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
       <p class="caption mb-0">(C) 2018-2021 Dev Null Productions LLC.All Rights Reserved</p>
     </div>
@@ -67,6 +87,18 @@ export default {
 
   .footer-navbar-item {
     padding: 20px;
+  }
+}
+
+.router-link-exact-active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:after {
+    content: url("~@/assets/imgs/link_active.svg");
+    width: 8px;
+    height: 8px;
   }
 }
 

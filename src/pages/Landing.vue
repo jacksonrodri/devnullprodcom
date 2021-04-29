@@ -3,6 +3,7 @@
     <div id="landing">
       <div id="title_wrapper">
         <h1 class="typography-h1">Engineering Solutions for The Digital Age</h1>
+        <LightBox />
       </div>
 
       <div id="cards">
@@ -59,7 +60,10 @@
               </div>
             </div>
             <div class="text-center">
-              <b-button variant="primary" class="normal-btn text-white px-4 px-md-5 py-3">Lear more about our products</b-button>
+              <b-button
+                variant="primary" class="normal-btn text-white px-4 px-md-5 py-3"
+                href="/our-product"
+              >Learn more about our products</b-button>
             </div>
           </div>
         </div>
@@ -82,7 +86,10 @@
               </ul>
               <div class="pt-4 lets-chat">
                 <p class="body-1">Got an idea?</p>
-                <b-button variant="primary" class="normal-btn text-white px-5 py-3">let's chat</b-button>
+                <b-button
+                  variant="primary" class="normal-btn text-white px-5 py-3"
+                  href="/about#contactUs"
+                >let's chat</b-button>
               </div>
             </div>
           </div>
@@ -125,11 +132,13 @@
 <script>
 import MainLayout from '@/components/layout/MainLayout'
 import CustomCarousel from '@/components/carousel/CustomCarousel'
+import LightBox from '@/components/lightbox/LightBox'
 export default {
   name: 'Landing',
   components: {
     MainLayout,
-    CustomCarousel
+    CustomCarousel,
+    LightBox
   },
   data() {
     return {
@@ -157,8 +166,12 @@ export default {
   background-image: url("~@/assets/imgs/home-header-bg.png");
   background-position: center;
   background-size: cover;
-  display: flex;
-  justify-content: center;
+  text-align: center;
+
+  h1 {
+    margin: 0 auto;
+    margin-bottom: 48px;
+  }
 
   @media screen and (max-width: 767px) {
     min-height: 100vh;
@@ -433,7 +446,7 @@ export default {
   }
 }
 
-.section1 button {
+.section1 .normal-btn {
   margin-bottom: 102px;
 }
 
