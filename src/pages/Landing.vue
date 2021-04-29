@@ -100,32 +100,6 @@
         </div>
       </div>
     </div>
-
-    <!-- <div id="promo">
-      <iframe :width="mq_xs ? 280 : 560"
-              :height="mq_xs ? 158 : 315"
-              src="https://www.youtube.com/embed/THZZd3693AM"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-      </iframe>
-    </div> -->
-
-    <!--<div id="partners_wrapper">
-      <div id="partners_title_wrapper">
-        <h1>Partners</h1>
-      </div>
-
-      <div id="partners">
-        <div class="partner">
-          <a href="https://ripple.com"><img src="@/assets/partners/ripple.jpg" /></a>
-        </div>
-
-        <div class="partner">
-          <a href="https://coventure.vc"><img src="@/assets/partners/coventure.png" /></a>
-        </div>
-      </div>
-    </div>-->
   </MainLayout>
 </template>
 

@@ -4,8 +4,8 @@
     :class="{ 'hidden-navbar': !showNavbar, 'custom-navbar': customNavbar }"
   >
     <router-link to="/">
-      <img v-if="customNavbar" src="@/assets/imgs/logo_wordmark_black.svg" id="logo" />
-      <img v-else src="@/assets/logo.svg" id="logo" />
+      <img v-if="customNavbar || isWhiteBG" src="@/assets/imgs/logo_wordmark_black.svg" id="logo" />
+      <img v-else src="@/assets/imgs/logo_wordmark_white.svg" id="logo" />
     </router-link>
 
     <div v-if="mq_lt_lg">
@@ -29,11 +29,19 @@
                src="@/assets/x-white.svg" />
         </div>
 
-        <MainNav :customNavbar="customNavbar" hamburger @nav="hamburger_visible = false"/>
+        <MainNav
+          :customNavbar="customNavbar"
+          hamburger
+          @nav="hamburger_visible = false"
+        />
       </div>
     </div>
 
-    <MainNav :customNavbar="customNavbar" v-else />
+    <MainNav
+      v-else
+      :customNavbar="customNavbar"
+      :isWhiteBG="isWhiteBG"
+    />
     <b-button
       v-if="!mq_lt_lg" class="normal-btn px-5 py-3 mb-0 text-white contact-us" variant="primary"
       href="/about#contactUs"
@@ -46,7 +54,9 @@ import MainNav from './MainNav'
 
 export default {
   name: 'MainHeader',
-
+  props : {
+    isWhiteBG: Boolean,
+  },
   components : {
     MainNav
   },
@@ -108,8 +118,10 @@ export default {
 }
 
 #logo{
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 #main_hamburger_open_icon{

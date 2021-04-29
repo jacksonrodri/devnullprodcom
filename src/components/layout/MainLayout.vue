@@ -1,7 +1,7 @@
 <template>
   <div id="main_layout" :class="$mq">
     <div id="main_header_container">
-      <MainHeader />
+      <MainHeader :isWhiteBG="isWhiteBG" />
     </div>
 
     <div id="main_content">
@@ -20,7 +20,6 @@ import MainFooter from './MainFooter'
 
 export default {
   name: 'MainLayout',
-
   components: {
     MainHeader,
     MainFooter
@@ -30,7 +29,8 @@ export default {
     section : {
       type : String,
       required : true
-    }
+    },
+    isWhiteBG: Boolean
   }
 }
 </script>

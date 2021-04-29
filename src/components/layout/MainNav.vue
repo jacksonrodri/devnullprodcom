@@ -2,25 +2,25 @@
   <nav id="nav">
     <ul>
       <li>
-        <router-link :class="{'text-white': !customNavbar, 'text-dark': customNavbar}" to="/">
+        <router-link :class="{'text-white': !customNavbar, 'text-dark': customNavbar || isWhiteBG}" to="/">
           Home
         </router-link>
       </li>
 
       <li>
-        <router-link :class="{'text-white': !customNavbar, 'text-dark': customNavbar}" to="/our-product">
+        <router-link :class="{'text-white': !customNavbar, 'text-dark': customNavbar || isWhiteBG}" to="/our-product">
           Our Product
         </router-link>
       </li>
 
       <li>
-        <router-link :class="{'text-white': !customNavbar, 'text-dark': customNavbar}" to="/articles">
+        <router-link :class="{'text-white': !customNavbar, 'text-dark': customNavbar || isWhiteBG}" to="/articles">
           Articles
         </router-link>
       </li>
 
       <li>
-        <router-link :class="{'text-white': !customNavbar, 'text-dark': customNavbar}" to="/about">
+        <router-link :class="{'text-white': !customNavbar, 'text-dark': customNavbar || isWhiteBG}" to="/about">
           About Us
         </router-link>
       </li>
@@ -35,6 +35,7 @@ export default {
   props : {
     hamburger: Boolean,
     customNavbar: Boolean,
+    isWhiteBG: Boolean,
   }
 }
 </script>

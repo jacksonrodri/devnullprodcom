@@ -1,5 +1,5 @@
 <template>
-  <MainLayout section="ArticleDetail">
+  <MainLayout section="ArticleDetail" :isWhiteBG="true">
     <div id="articleDetail">
       <div class="section">
         <div class="section-wrapper">
