@@ -15,7 +15,7 @@
 
             <li class="footer-navbar-item">
               <router-link class="typography-h6 text-white" to="/our-product">
-                Our Product
+                Our Products
               </router-link>
             </li>
 
@@ -50,7 +50,7 @@ export default {
     return {
       menu: [
         { link: "/", name: "Home" },
-        { link: "/", name: "Our Product" },
+        { link: "/", name: "Our Products" },
         { link: "/", name: "Articles" },
         { link: "/", name: "About Us" },
       ]
@@ -84,9 +84,14 @@ export default {
   margin-bottom: 0;
   flex-wrap: wrap;
   justify-content: center;
+  flex-direction: row;
 
   .footer-navbar-item {
     padding: 20px;
+  }
+
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
   }
 }
 

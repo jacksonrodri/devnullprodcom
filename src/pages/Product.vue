@@ -66,7 +66,12 @@
       </div>
       <div class="bg-white industry">
         <div>
-          <h4 class="typograph-4 text-dark">Industry insight & knowledge</h4>
+          <h4
+            class="typograph-4 text-dark cursor-pointer"
+            @click="goArticles()"
+          >
+            Industry insight & knowledge
+          </h4>
           <a class="subtitle-2" href="#">Read Article</a>
         </div>
       </div>
@@ -92,8 +97,8 @@ export default {
     }
   },
   methods: {
-    onSubmit: function () {
-
+    goArticles: function () {
+      this.$router.push("/articles")
     }
   }
 }

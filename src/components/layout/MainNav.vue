@@ -9,7 +9,7 @@
 
       <li>
         <router-link :class="{'text-white': !customNavbar, 'text-dark': customNavbar || isWhiteBG}" to="/our-product">
-          Our Product
+          Our Products
         </router-link>
       </li>
 

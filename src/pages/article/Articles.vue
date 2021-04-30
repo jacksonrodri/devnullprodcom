@@ -14,6 +14,7 @@
               />
               <div class="text-center article-list-loadmore">
                 <b-button
+                  v-if="(articles.length / 5) > count"
                   variant="primary"
                   class="normal-btn text-white px-5 py-3"
                   @click="loadMore"

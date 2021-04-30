@@ -41,6 +41,7 @@ export default {
 .article-item {
   padding: 28px 0;
   display: flex;
+  cursor: pointer;
 
   &-content {
     flex: 1;
