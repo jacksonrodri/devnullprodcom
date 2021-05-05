@@ -1,16 +1,16 @@
 <template>
   <div
     id="main_header"
-    :class="{ 'hidden-navbar': !showNavbar, 'custom-navbar': customNavbar }"
+    :class="{ 'hidden-navbar': !showNavbar}"
   >
     <router-link to="/" :class="{ 'hamburger_logo':hamburger_visible }">
-      <img v-if="(customNavbar || isWhiteBG) && !hamburger_visible" src="@/assets/imgs/logo_wordmark_black.svg" id="logo" />
+      <img v-if="(!showNavbar || isWhiteBG) && !hamburger_visible" src="@/assets/imgs/logo_wordmark_black.svg" id="logo" />
       <img v-else src="@/assets/imgs/logo_wordmark_white.svg" id="logo" />
     </router-link>
 
     <div v-if="mq_lt_lg">
       <img
-        v-if="(!customNavbar && !isWhiteBG)"
+        v-if="(!showNavbar && !isWhiteBG)"
         id="main_hamburger_open_icon"
         src="@/assets/imgs/white_ham_menu.svg"
         @click="hamburger_visible = true"
@@ -38,7 +38,7 @@
 
     <MainNav
       v-else
-      :customNavbar="customNavbar"
+      :customNavbar="!showNavbar"
       :isWhiteBG="isWhiteBG"
     />
     <b-button
@@ -82,15 +82,7 @@ export default {
   },
   methods: {
     onScroll () {
-      if (window.pageYOffset < 0) {
-        return
-      }
-      if (Math.abs(window.pageYOffset - this.lastScrollPosition) < 60) {
-        return
-      }
-      this.customNavbar = window.pageYOffset > 60
-      this.showNavbar = window.pageYOffset < this.lastScrollPosition
-      this.lastScrollPosition = window.pageYOffset
+      this.showNavbar = window.pageYOffset < 600;
     }
   }
 }
@@ -113,7 +105,15 @@ export default {
 }
 
 #main_header.hidden-navbar {
-  transform: translate3d(0, -100%, 0);
+  // transform: translate3d(0, -100%, 0);  
+  background: $white;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+
+  #logo {
+    height: 40px;
+    width: 40px;
+  }
 }
 
 #logo{
@@ -164,17 +164,6 @@ export default {
   position: absolute;
   right: 32px;
   top: 28px;
-}
-
-.custom-navbar {
-  background: $white;
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-
-  #logo {
-    height: 40px;
-    width: 40px;
-  }
 }
 
 .hamburger_logo {
