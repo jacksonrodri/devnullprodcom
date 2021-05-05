@@ -7,14 +7,13 @@
           <div class="article-section">
             <div class="article-list">
               <ArticleItem
-                v-for="(item, index) of getArticles"
-                :key="index"
-                :item="item"
-                :id="index"
+                v-for="post of sorted_enabled_posts"
+                :key="post.path"
+                :item="post"
               />
               <div class="text-center article-list-loadmore">
                 <b-button
-                  v-if="(articles.length / 5) > count"
+                  v-if="count < enabled_posts.length"
                   variant="primary"
                   class="normal-btn text-white px-5 py-3"
                   @click="loadMore"
@@ -34,109 +33,16 @@
 <script>
 import MainLayout from "@/components/layout/MainLayout"
 import ArticleItem from "@/components/article/ArticleItem"
+import HasPosts   from "@/mixins/HasPosts"
+
 export default {
   name: "Articles",
+  mixins: [
+    HasPosts
+  ],
   components: {
     MainLayout,
     ArticleItem
-  },
-  data() {
-    return {
-      articles: [
-        {
-          date: "March 4th",
-          subject: "XRP vs XLM - A Technical Comparison - Part 4",
-          tags: [
-            "xrp",
-            "xlm",
-            "technical"
-          ]
-        },
-        {
-          date: "March 4th",
-          subject: "XRP vs XLM - A Technical Comparison - Part 4",
-          tags: [
-            "xrp",
-            "xlm",
-            "technical"
-          ]
-        },
-        {
-          date: "March 4th",
-          subject: "XRP vs XLM - A Technical Comparison - Part 4",
-          tags: [
-            "xrp",
-            "xlm",
-            "technical"
-          ]
-        },
-        {
-          date: "March 4th",
-          subject: "XRP vs XLM - A Technical Comparison - Part 4",
-          tags: [
-            "xrp",
-            "xlm",
-            "technical"
-          ]
-        },
-        {
-          date: "March 4th",
-          subject: "XRP vs XLM - A Technical Comparison - Part 4",
-          tags: [
-            "xrp",
-            "xlm",
-            "technical"
-          ]
-        },
-        {
-          date: "March 4th",
-          subject: "XRP vs XLM - A Technical Comparison - Part 4",
-          tags: [
-            "xrp",
-            "xlm",
-            "technical"
-          ]
-        },
-        {
-          date: "March 4th",
-          subject: "XRP vs XLM - A Technical Comparison - Part 4",
-          tags: [
-            "xrp",
-            "xlm",
-            "technical"
-          ]
-        },
-        {
-          date: "March 4th",
-          subject: "XRP vs XLM - A Technical Comparison - Part 4",
-          tags: [
-            "xrp",
-            "xlm",
-            "technical"
-          ]
-        },
-        {
-          date: "March 4th",
-          subject: "XRP vs XLM - A Technical Comparison - Part 4",
-          tags: [
-            "xrp",
-            "xlm",
-            "technical"
-          ]
-        }
-      ],
-      count: 1,
-    }
-  },
-  computed: {
-    getArticles: function() {
-      return this.articles.filter((_, index) => index < this.count * 5)
-    }
-  },
-  methods: {
-    loadMore: function() {
-      this.count ++
-    }
   }
 }
 </script>

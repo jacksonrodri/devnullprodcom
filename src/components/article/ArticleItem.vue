@@ -4,34 +4,33 @@
     @click="goArticleDetail"
   >
     <div class="article-item-content">
-      <p class="article-item-content--date body-2 mb-3">{{item.date}}</p>
-      <h4 class="article-item-content--subject typography-h4 text-dark mb-2">{{item.subject}}</h4>
+      <p class="article-item-content--date body-2 mb-3">{{parsed_dates[item.path].toLocaleString('default', { month: 'long' })}} {{parsed_dates[item.path].getDate()}}</p>
+      <h4 class="article-item-content--subject typography-h4 text-dark mb-2">{{item.title}}</h4>
       <div class="article-item-content--tags caption d-flex">
         <span class="tag mr-1">Tags: </span>
-        <ul class="tag-list list-inline d-flex">
-          <li v-for="(tag, index) of item.tags" :key="index">
-            <a href="#">{{tag}}</a>
-            <span v-if="index < item.tags.length - 1" class="mr-1">,</span>
-          </li>
-        </ul>
+        <span class="tag-list">{{ item.tags }}</span>
       </div>
     </div>
     <div class="article-item-image">
-      <img src="@/assets/imgs/img-homepage-p-dei.svg">
+      <img :src="post_img(item)">
     </div>
   </div>
 </template>
 
 <script>
+import HasPosts   from "@/mixins/HasPosts"
+
 export default {
   name: "ArticleItem",
+  mixins: [
+    HasPosts
+  ],
   props: [
     "item",
-    "id"
   ],
   methods: {
     goArticleDetail: function () {
-      this.$router.push(`/articles/${this.id}`)
+      this.$router.push(`/articles/${this.item.path}`)
     }
   }
 }
