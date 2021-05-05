@@ -1,11 +1,7 @@
 <template>
   <MainLayout section="landing">
     <div id="landing">
-      <div id="parallaxy_image">
-        <parallax>
-          <img src="@/assets/imgs/home-header-bg.png" alt="very cool bg">
-        </parallax>
-      </div>
+      <Parallaxy />
       <div id="title_wrapper">
         <h1 class="typography-h1">Engineering Solutions for The Digital Age</h1>
         <LightBox />
@@ -112,7 +108,7 @@
 import MainLayout from '@/components/layout/MainLayout'
 import CustomCarousel from '@/components/carousel/CustomCarousel'
 import LightBox from '@/components/lightbox/LightBox'
-import Parallax from 'vue-parallaxy'
+import Parallaxy from '@/components/parallaxy/Parallaxy'
 
 export default {
   name: 'Landing',
@@ -120,7 +116,7 @@ export default {
     MainLayout,
     CustomCarousel,
     LightBox,
-    Parallax
+    Parallaxy
   },
   data() {
     return {
@@ -139,14 +135,6 @@ export default {
 @import "@/scss/custom.scss";
 #landing{
   width: 100%;
-}
-
-#parallaxy_image {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 #title_wrapper{

@@ -3,14 +3,14 @@
     id="main_header"
     :class="{ 'hidden-navbar': !showNavbar}"
   >
-    <router-link to="/" :class="{ 'hamburger_logo':hamburger_visible }">
+    <router-link to="/" :class="{ 'hamburger_logo': hamburger_visible }">
       <img v-if="(!showNavbar || isWhiteBG) && !hamburger_visible" src="@/assets/imgs/logo_wordmark_black.svg" id="logo" />
       <img v-else src="@/assets/imgs/logo_wordmark_white.svg" id="logo" />
     </router-link>
 
     <div v-if="mq_lt_lg">
       <img
-        v-if="(!showNavbar && !isWhiteBG)"
+        v-if="(showNavbar && !isWhiteBG)"
         id="main_hamburger_open_icon"
         src="@/assets/imgs/white_ham_menu.svg"
         @click="hamburger_visible = true"
