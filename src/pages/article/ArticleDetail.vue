@@ -15,9 +15,9 @@
             <div class="article-item-detail-image mb-3">
               <img :src="post_img(post)">
             </div>
-            <p class="article-item-detail-content body-1 mb-4 pb-5">
-              {{ post.summary }}
-            </p>
+            <div class="article-item-post-container mb-4 pb-5">
+              <router-view />
+            </div>
           </div>
           <div class="article-item-share">
             <SocialShare />
@@ -72,7 +72,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import "@/scss/custom.scss";
 #articleDetail {
   background: $grey-0;
@@ -140,6 +140,13 @@ export default {
       margin-left: -24px;
       margin-right: -24px;
     }
+  }
+}
+
+.article-item-post-container {
+  img {
+    max-width: 100%;
+    padding: 25px;
   }
 }
 

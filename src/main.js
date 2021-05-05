@@ -34,7 +34,7 @@ const posts =
   Posts.map(function(entry){
     return {
       path: entry.path,
-      component: () => import(`./posts/${entry.path}.md`)
+      component: () => import(`@/posts/${entry.path}.md`)
     }
   })
 
@@ -45,7 +45,8 @@ const routes = [
   { path: "/our-product",               component: Product },
 
   { path: "/articles",            component: Articles },
-  { path: "/articles/:id",        component: ArticleDetail },
+  { path: "/article",             component: ArticleDetail,
+                                  children: posts     },
 
   { path: "/blog",                component: Blog },
   { path: "/post",                component: Post,

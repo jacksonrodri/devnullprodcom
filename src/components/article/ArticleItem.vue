@@ -30,7 +30,7 @@ export default {
   ],
   methods: {
     goArticleDetail: function () {
-      this.$router.push(`/articles/${this.item.path}`)
+      this.$router.push(`/article/${this.item.path}`)
     }
   }
 }
