@@ -16,7 +16,7 @@
               <p class="subtitle-2 mb-3">Who is using it</p>
               <p class="body-2 text-grey-4">
                 Institutional cryptocurrency custodians <br />
-                Retail / Ecommerce / Small & medium business who need alerts, notifications <br />
+                Retail / Ecommerce / & other business who need alerts & notifications <br />
                 Auditors / forensics specialists / analysts
               </p>
             </div>
