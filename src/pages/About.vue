@@ -8,7 +8,7 @@
             Our story began in 2017 when a few engineers and finance professionals realized the awesome disruptive potential of distributed ledger technologies. Dev Null Productions was formed the following spring to deliver high quality, robust products and services of value. In the years since we haven't looked back and are eager to tackle the opportunities presented in The Digital Age!
           </p>
 
-          <Team />
+          <!--<Team />-->
           <Contact />
         </div>
         <div class="linear-gradient"></div>
@@ -19,7 +19,7 @@
 
 <script>
 import MainLayout from '@/components/layout/MainLayout'
-import Team       from '@/components/Team'
+//import Team       from '@/components/Team'
 import Contact    from '@/components/Contact'
 
 export default {
@@ -27,7 +27,7 @@ export default {
 
   components: {
     MainLayout,
-    Team,
+    //Team,
     Contact
   },
 }
