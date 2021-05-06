@@ -32,7 +32,7 @@
             </li>
             <li style="padding: 15px 0;">
               <a class="typography-h6" href="https://twitter.com/DevNullProd">
-                <img src="@/assets/twitter.png" />
+                <img src="@/assets/imgs/twitter.svg" />
               </a>
             </li>
           </ul>
