@@ -6,7 +6,7 @@
           <a
             class="subtitle-2 article-back d-flex align-items-center"
             @click="goBackArticle">
-            Back to Article
+            Back to Articles
           </a>
           <h3 class="typography-h3 mb-3">{{ post.title }}</h3>
           <div class="article-item-detail">
@@ -128,7 +128,6 @@ export default {
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
       border-radius: 4px;
     }
 

@@ -507,21 +507,4 @@ export default {
     margin-bottom: 130px;
   }
 }
-
-#content{
-  height: 100%;
-  width: 80%;
-  margin: auto;
-  margin-bottom: 75px;
-  padding-top: 50px;
-}
-
-#content p{
-  font-family: MavenPro;
-  text-align: center;
-}
-
-#promo{
-  text-align: center;
-}
 </style>

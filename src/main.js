@@ -22,8 +22,6 @@ import Products         from "./pages/Products.vue"
 
 import Articles         from "./pages/Articles.vue"
 import ArticleDetail    from "./pages/ArticleDetail.vue"
-
-import Blog             from "./pages/Blog.vue"
 import Posts            from "./assets/posts"
 
 const posts =
@@ -42,9 +40,7 @@ const routes = [
 
   { path: "/articles",            component: Articles },
   { path: "/article",             component: ArticleDetail,
-                                  children: posts     },
-
-  { path: "/blog",                component: Blog }
+                                  children: posts     }
 ]
 
 const router = new VueRouter({

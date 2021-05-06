@@ -76,6 +76,10 @@ export default {
 .footer-nav {
   margin-top: 24px;
   margin-bottom: 24px;
+
+  img {
+    vertical-align: unset;
+  }
 }
 
 .footer-navbar {
@@ -88,6 +92,7 @@ export default {
 
   .footer-navbar-item {
     padding: 20px;
+    min-height: 75px;
   }
 
   @media screen and (max-width: 480px) {
