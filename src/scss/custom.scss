@@ -1,0 +1,179 @@
+$blue-3: #2F7BBD;
+$blue-4: #172837;
+$primary-blue: #5EB4FF;
+$primary: #5EB4FF;
+$white: #FCFCFC;
+$grey-0: #F4F4F4;
+$grey-1: #CCCDCE;
+$grey-2: #9A9EA0;
+$grey-3: #707275;
+$grey-4: #36383A;
+$dark: #121416;
+$bg-grey: #C4C4C4;
+
+.text-grey-4 {
+  color: $grey-4 !important;
+}
+
+.text-grey-3 {
+  color: $grey-3 !important;
+}
+
+.text-grey-2 {
+  color: $grey-2 !important;
+}
+
+.text-grey-1 {
+  color: $grey-1 !important;
+}
+
+.body-1 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.body-2 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: $grey-2;
+}
+
+.subtitle-1 {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: $blue-3;
+}
+
+.subtitle-2 {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: $primary-blue
+}
+
+.caption {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: $grey-0;
+}
+
+.typography-h1 {
+  text-align: center;
+  color: $white;
+  font-family: DM Sans;
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 80px;
+  max-width: 894px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media screen and (max-width: 991px) {
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
+
+.typography-h2 {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 80px;
+  text-align: center;
+  letter-spacing: -0.5px;
+  color: $dark;
+  max-width: 864px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 767px) {
+    font-size: 48px;    
+    line-height: 48px;
+  }
+}
+
+.typography-h3 {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 54px;
+  color: $dark;
+  max-width: 864px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 767px) {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
+.typography-h4 {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 40px;
+  letter-spacing: 0.5px;
+  color: $primary-blue;
+
+  @media screen and (max-width: 767px) {
+    font-size: 32px;
+  }
+}
+
+.typography-h5 {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+
+.typography-h6 {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: $white;
+}
+
+.normal-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  color: $white;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: bold !important;
+  font-size: 14px !important;
+  line-height: 16px !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+@import 'node_modules/bootstrap/scss/bootstrap';
