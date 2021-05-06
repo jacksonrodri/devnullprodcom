@@ -9,15 +9,14 @@
               <ArticleItem
                 v-for="post of sorted_enabled_posts"
                 :key="post.path"
-                :item="post"
-              />
+                :_post="post" />
+
               <div class="text-center article-list-loadmore">
                 <b-button
                   v-if="count < enabled_posts.length"
                   variant="primary"
                   class="normal-btn text-white px-5 py-3"
-                  @click="loadMore"
-                >
+                  @click="loadMore">
                   Load More
                 </b-button>
               </div>

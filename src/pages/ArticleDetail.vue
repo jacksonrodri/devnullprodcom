@@ -3,31 +3,27 @@
     <div id="articleDetail">
       <div class="section">
         <div class="section-wrapper">
-          <a
-            class="subtitle-2 article-back d-flex align-items-center"
-            @click="goBackArticle">
+          <a class="subtitle-2 article-back d-flex align-items-center"
+             @click="nav_to_articles">
             Back to Articles
           </a>
+
           <h3 class="typography-h3 mb-3">{{ post.title }}</h3>
+
           <div class="article-item-detail">
-            <p class="article-item-detail-date body-2 mb-3">{{parsed_dates[post.path].toLocaleString('default', { month: 'long' })}} {{parsed_dates[post.path].getDate()}}</p>
+            <p class="article-item-detail-date body-2 mb-3">{{parsed_date.toLocaleString('default', { month: 'long' })}} {{parsed_date.getDate()}}</p>
+
             <div class="article-item-detail-image mb-3">
               <img :src="post_img(post)">
             </div>
-            <div class="article-item-post-container mb-4 pb-5">
+
+            <div class="article-item-post-container mb-2 pb-5">
               <router-view />
             </div>
           </div>
+
           <div class="article-item-share">
-            <SocialShare />
-          </div>
-          <div class="article-section">
-            <div class="article-list">
-              <ArticleItem
-                v-for="(item) of recent_enabled_posts"
-                :key="item.path"
-                :item="item" />
-            </div>
+            <SocialShare :post="post" />
           </div>
         </div>
       </div>
@@ -36,34 +32,24 @@
 </template>
 
 <script>
-import MainLayout from "@/components/layout/MainLayout"
-import ArticleItem from "@/components/ArticleItem"
+import MainLayout  from "@/components/layout/MainLayout"
 import SocialShare from "@/components/SocialShare"
-import HasPosts from "@/mixins/HasPosts"
-import Posts from "@/assets/posts"
+import HasPost     from "@/mixins/HasPost"
 
 export default {
   name: "ArticleDetail",
+
+  mixins: [
+    HasPost
+  ],
+
   components: {
     MainLayout,
-    ArticleItem,
-    SocialShare
+    SocialShare,
   },
-  mixins: [
-    HasPosts
-  ],
-  computed: {
-    post: function(){
-      var path = this.$route.path.split("/")
-          path = path[path.length-1]
 
-      return Posts.find(function(post){
-        return post.path == path;
-      })
-    },
-  },
   methods: {
-    goBackArticle: function () {
+    nav_to_articles: function () {
       this.$router.push("/articles")
     }
   }
@@ -89,17 +75,6 @@ export default {
   margin: 0 auto;
   padding-left: 24px;
   padding-right: 24px;
-}
-
-.article-section {
-  border-top: 2px solid $primary-blue;
-  padding-top: 50px;
-  padding-bottom: 180px;
-  display: flex;
-
-  @media screen and (max-width: 767px) {
-    padding-bottom: 22px;
-  }
 }
 
 .article-back {
@@ -148,10 +123,10 @@ export default {
 }
 
 .article-item-share {
-  margin-bottom: 80px;
+  padding-bottom: 25px;
 
   @media screen and (max-width: 767px) {
-    margin-bottom: 60px;
+    padding-bottom: 10px;
   }
 }
 </style>

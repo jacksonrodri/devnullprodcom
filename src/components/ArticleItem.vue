@@ -1,39 +1,35 @@
 <template>
   <div
     class="article-item"
-    @click="goArticleDetail"
+    @click="nav_to_article"
   >
     <div class="article-item-content">
-      <p class="article-item-content--date body-2 mb-3">{{parsed_dates[item.path].toLocaleString('default', { month: 'long' })}} {{parsed_dates[item.path].getDate()}}</p>
-      <h4 class="article-item-content--subject typography-h4 text-dark mb-2">{{item.title}}</h4>
+      <p class="article-item-content--date body-2 mb-3">{{parsed_date.toLocaleString('default', { month: 'long' })}} {{parsed_date.getDate()}}</p>
+      <h4 class="article-item-content--subject typography-h4 text-dark mb-2">{{post.title}}</h4>
       <div class="article-item-content--tags caption d-flex">
         <span class="tag mr-1">Tags: </span>
-        <span class="tag-list">{{ item.tags }}</span>
+        <span class="tag-list">{{ post.tags }}</span>
       </div>
     </div>
     <div class="article-item-image">
-      <img :src="post_img(item)">
+      <img :src="post_img(post)">
     </div>
   </div>
 </template>
 
 <script>
-import HasPosts   from "@/mixins/HasPosts"
+import HasPost   from "@/mixins/HasPost"
 
 export default {
   name: "ArticleItem",
 
   mixins: [
-    HasPosts
-  ],
-
-  props: [
-    "item",
+    HasPost
   ],
 
   methods: {
-    goArticleDetail: function () {
-      this.$router.push(`/article/${this.item.path}`)
+    nav_to_article: function () {
+      this.$router.push(`/article/${this.post.path}`)
     }
   }
 }

@@ -6,6 +6,7 @@ export default {
       count: 5,
     }
   },
+
   computed : {
     enabled_posts : function(){
       return posts.filter(function(post){
@@ -33,9 +34,6 @@ export default {
   },
 
   methods : {
-    post_img : function(post){
-      return require('../assets/posts/' + post.path + '.png')
-    },
     loadMore: function () {
       this.count = this.count + 5;
     }
