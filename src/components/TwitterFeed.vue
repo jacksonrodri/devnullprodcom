@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <Timeline :id="handle" sourceType="profile"
-                 :options="{ tweetLimit: '3' }" />
-  </div>
+  <Timeline :id="handle" sourceType="profile"
+               :options="{ tweetLimit: '4' }" />
 </template>
 
 <script>

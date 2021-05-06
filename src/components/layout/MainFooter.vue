@@ -14,7 +14,7 @@
             </li>
 
             <li class="footer-navbar-item">
-              <router-link class="typography-h6 text-white" to="/our-product">
+              <router-link class="typography-h6 text-white" to="/products">
                 Our Products
               </router-link>
             </li>

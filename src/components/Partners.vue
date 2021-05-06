@@ -4,8 +4,7 @@
       <div
         class="carousel-item"
         v-for="(item, index) in arr"
-        :key="index"
-      >
+        :key="index">
         <div>
         </div>
       </div>
@@ -20,12 +19,13 @@
 <script>
   import VueSlickCarousel from 'vue-slick-carousel'
   import 'vue-slick-carousel/dist/vue-slick-carousel.css'
-  // optional style for arrows & dots
   import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
  
   export default {
-    name: 'CustomCarousel',
+    name: 'Partners',
+
     components: { VueSlickCarousel },
+
     data() {
       return {
         settings: {
@@ -64,6 +64,7 @@
         arr: [1, 2, 3, 4, 5, 6]
       }
     },
+
     methods: {
       showNext() {
         this.$refs.carousel.next()
@@ -71,6 +72,7 @@
     },
   }
 </script> 
+
 <style scoped lang="scss">
 @import '@/scss/custom.scss';
 

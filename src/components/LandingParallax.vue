@@ -1,18 +1,20 @@
 <template>
   <div id="parallaxy_image">
-    <parallax>
-      <img src="@/assets/imgs/home-header-bg.png" alt="very cool bg">
+    <parallax :speedFactor="0.35" direction="down">
+      <img src="@/assets/imgs/home-header-bg.png" />
     </parallax>
   </div>
 </template>
 
 <script>
 import Parallax from 'vue-parallaxy'
+
 export default {
-  name: 'Parallaxy',
+  name: 'LandingParallax',
+
   components: {
     Parallax
-  },
+  }
 }
 </script>
 <style lang="scss">

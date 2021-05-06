@@ -1,10 +1,10 @@
 <template>
   <MainLayout section="landing">
     <div id="landing">
-      <Parallaxy />
+      <LandingParallax />
       <div id="title_wrapper">
         <h1 class="typography-h1">Engineering Solutions for The Digital Age</h1>
-        <LightBox />
+        <PromoVideo />
       </div>
 
       <div id="cards">
@@ -12,18 +12,18 @@
           <div>
             <img src="@/assets/imgs/Innvoation.svg" />
             <h5 class="title">Innovation.</h5>
-            <p class="content">We developed first to market patented Blockchain tracker.</p>
+            <p class="content">We developed the first to market patented Blockchain tracker.</p>
           </div>
           <div>
             <img src="@/assets/imgs/reliable.svg" />
             <h5 class="title">Reliable & Excellence.</h5>
-            <p class="content">With the solid track record, we deliver solutions rapidly for clients in various domain.</p>
+            <p class="content">With the solid track record, we deliver solutions rapidly for clients in various domains.</p>
           </div>
         </div>
         <div class="right-card">
           <div class="right-card-wrapper">
-            <h5 class="title">Proudly involved with core Blockchain developement.</h5>
-            <a href="#">Read Articles</a>
+            <h5 class="title">Proudly involved in core Blockchain developement.</h5>
+            <a href="/articles">Read Articles</a>
           </div>
         </div>
       </div>
@@ -31,10 +31,10 @@
         <div class="section1">
           <div class="section-wrapper">
             <h4 class="typography-h4 text-center">
-              Design for convienient, built for scalibility. 
+              Designed for convenience, built for scalibility. 
             </h4>
             <p class="section-header-description">
-              Over the year, we hear the user desires. With multiple of cycle of developement,  we are proundly be the product leader for Blockchain tracker.
+              Over the years, we've heard our users. With multiple of developement cycles,  we are proudly be the product leader for Blockchain tracking.
             </p>
             <div class="image-card d-flex">
               <div class="image-card__image">
@@ -43,9 +43,9 @@
               <div class='image-card__content'>
                 <div>
                   <h5 class="typograph-h5">BT</h5>
-                  <h4 class="typography-h4 text-white">Blockchain Transaction Tracker</h4>
+                  <h4 class="typography-h4 text-white">Blockchain Tracker</h4>
                 </div>
-                <p class="body-1 text-grey-1">Our transaction tracking suite (patent pending) is the perfect solution to receive email, text message, and webhook alerts on Blockchain activity with no fuss.</p>
+                <p class="body-1 text-grey-1">Our transaction tracking suite (patent pending) is the perfect solution to receive email, text message, and API alerts upon Blockchain activity with no fuss.</p>
               </div>
             </div>
             <div class="image-card image-card-2 d-flex">
@@ -55,25 +55,25 @@
               <div class='image-card__content'>
                 <div>
                   <h5 class="typograph-h5">XRP INTEL</h5>
-                  <h4 class="typography-h4 text-white">Decentralized Exchange Intelligence</h4>
+                  <h4 class="typography-h4 text-white">Decentralized Finance Intelligence</h4>
                 </div>
-                <p class="body-1 text-grey-1">Our DEX Intelligence suite analyzes several major markets and delivers consistent, reliable stats.</p>
+                <p class="body-1 text-grey-1">Our DeFI Intelligence suite analyzes several major markets and delivers consistent, reliable stats.</p>
               </div>
             </div>
             <div class="text-center">
               <b-button
                 variant="primary" class="normal-btn text-white px-4 px-md-5 py-3"
-                href="/our-product"
+                href="/products"
               >Learn more about our products</b-button>
             </div>
           </div>
         </div>
-        <div class="section2 carousel-section">
+        <div class="section2 partners-section">
           <div class="section-wrapper">
             <h4 class="typography-h4 text-center our-partner">
               Our partners
             </h4>
-            <CustomCarousel />
+            <Partners />
           </div>
         </div>
         <div class="section3">
@@ -81,7 +81,7 @@
             <h4 class="typography-h4">Consultancy & Collaboration</h4>
             <div class="section-content">
               <p class="body-1 mb-4">We are an engineering firm focused on delivering robust, reliable digital solutions. As experts in many innovative technologies and standards, Dev Null Productions is confident that we will deliver solutions for your needs in any digital domain. We operate both on a consultancy basis and offer premium subscription services to our products.</p>
-              <p class="subtitle-1">Industry we work with</p>
+              <p class="subtitle-1">Industries we work with</p>
               <ul class="list-inline mb-3">
                 <li v-for="(item, index) of collaborations" :key="index" class="typography-h5 mb-2">{{item}}</li>
               </ul>
@@ -106,17 +106,17 @@
 
 <script>
 import MainLayout from '@/components/layout/MainLayout'
-import CustomCarousel from '@/components/carousel/CustomCarousel'
-import LightBox from '@/components/lightbox/LightBox'
-import Parallaxy from '@/components/parallaxy/Parallaxy'
+import Partners from '@/components//Partners'
+import PromoVideo from '@/components/PromoVideo'
+import LandingParallax from '@/components/LandingParallax'
 
 export default {
   name: 'Landing',
   components: {
     MainLayout,
-    CustomCarousel,
-    LightBox,
-    Parallaxy
+    Partners,
+    PromoVideo,
+    LandingParallax
   },
   data() {
     return {
@@ -124,7 +124,7 @@ export default {
         "Fintech",
         "Blockchain",
         "Data & Analytics",
-        "Network operation & Monitoring"
+        "Network Operation & Monitoring"
       ]
     }
   }
@@ -523,50 +523,5 @@ export default {
 
 #promo{
   text-align: center;
-}
-
-#partners_wrapper{
-  padding: 75px 25px;
-  background-color: #8bc7f532;
-}
-
-#partners_title_wrapper h1{
-  margin-bottom: 50px;
-  text-align: center;
-  font-family: Lora;
-}
-
-#partners{
-  width: 80%;
-  margin: auto;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-#main_layout.md #partners,
-#main_layout.sm #partners,
-#main_layout.xs #partners{
-  flex-direction: column;
-}
-
-.partner{
-  padding: 10px 50px;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  border-radius: 5px;
-  border: 1px solid black;
-}
-
-#main_layout.md .partner,
-#main_layout.sm .partner,
-#main_layout.xs .partner{
-  margin-bottom: 25px;
-  min-height: 100px;
-}
-
-.partner img{
-  max-height: 150px;
-  max-width: 150px;
 }
 </style>

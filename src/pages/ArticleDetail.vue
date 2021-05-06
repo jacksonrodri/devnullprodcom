@@ -5,8 +5,7 @@
         <div class="section-wrapper">
           <a
             class="subtitle-2 article-back d-flex align-items-center"
-            @click="goBackArticle"
-          >
+            @click="goBackArticle">
             Back to Article
           </a>
           <h3 class="typography-h3 mb-3">{{ post.title }}</h3>
@@ -27,8 +26,7 @@
               <ArticleItem
                 v-for="(item) of recent_enabled_posts"
                 :key="item.path"
-                :item="item"
-              />
+                :item="item" />
             </div>
           </div>
         </div>
@@ -39,8 +37,8 @@
 
 <script>
 import MainLayout from "@/components/layout/MainLayout"
-import ArticleItem from "@/components/article/ArticleItem"
-import SocialShare from "@/components/share/SocialShare"
+import ArticleItem from "@/components/ArticleItem"
+import SocialShare from "@/components/SocialShare"
 import HasPosts from "@/mixins/HasPosts"
 import Posts from "@/assets/posts"
 

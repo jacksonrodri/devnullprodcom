@@ -18,17 +18,13 @@ Vue.use(VueRouter)
 
 import Landing          from "./pages/Landing.vue"
 import About            from "./pages/About.vue"
-import Product          from "./pages/Product.vue"
+import Products         from "./pages/Products.vue"
 
-import Articles         from "./pages/article/Articles.vue"
-import ArticleDetail    from "./pages/article/ArticleDetail.vue"
+import Articles         from "./pages/Articles.vue"
+import ArticleDetail    from "./pages/ArticleDetail.vue"
 
 import Blog             from "./pages/Blog.vue"
-import Post             from "./pages/Post.vue"
 import Posts            from "./assets/posts"
-
-import DexIntel         from "./pages/DexIntel.vue"
-import BlkTracker       from "./pages/BlkTracker.vue"
 
 const posts =
   Posts.map(function(entry){
@@ -42,18 +38,13 @@ const routes = [
   { path: "/",                    component: Landing },
   { path: "/about",               component: About },
 
-  { path: "/our-product",               component: Product },
+  { path: "/products",            component: Products },
 
   { path: "/articles",            component: Articles },
   { path: "/article",             component: ArticleDetail,
                                   children: posts     },
 
-  { path: "/blog",                component: Blog },
-  { path: "/post",                component: Post,
-                                  children : posts },
-
-  { path: "/products/dex",        component: DexIntel },
-  { path: "/products/tracker",    component: BlkTracker }
+  { path: "/blog",                component: Blog }
 ]
 
 const router = new VueRouter({

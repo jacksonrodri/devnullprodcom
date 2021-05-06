@@ -22,12 +22,15 @@ import HasPosts   from "@/mixins/HasPosts"
 
 export default {
   name: "ArticleItem",
+
   mixins: [
     HasPosts
   ],
+
   props: [
     "item",
   ],
+
   methods: {
     goArticleDetail: function () {
       this.$router.push(`/article/${this.item.path}`)

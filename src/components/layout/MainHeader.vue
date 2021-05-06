@@ -13,14 +13,13 @@
         v-if="(showNavbar && !isWhiteBG)"
         id="main_hamburger_open_icon"
         src="@/assets/imgs/white_ham_menu.svg"
-        @click="hamburger_visible = true"
-      />
+        @click="hamburger_visible = true" />
+
       <img
         v-else
         id="main_hamburger_open_icon"
         src="@/assets/imgs/black_ham_menu.svg"
-        @click="hamburger_visible = true"
-      />
+        @click="hamburger_visible = true" />
 
       <div id="main_hamburger" v-show="hamburger_visible">
         <div id="hide_hamburger"
@@ -31,16 +30,15 @@
 
         <MainNav
           hamburger
-          @nav="hamburger_visible = false"
-        />
+          @nav="hamburger_visible = false" />
       </div>
     </div>
 
     <MainNav
       v-else
       :customNavbar="!showNavbar"
-      :isWhiteBG="isWhiteBG"
-    />
+      :isWhiteBG="isWhiteBG" />
+
     <b-button
       v-if="!mq_lt_lg" class="normal-btn px-5 py-3 mb-0 text-white contact-us" variant="primary"
       href="/about#contactUs"
@@ -82,7 +80,7 @@ export default {
   },
   methods: {
     onScroll () {
-      this.showNavbar = window.pageYOffset < 600;
+      this.showNavbar = window.pageYOffset < 50;
     }
   }
 }

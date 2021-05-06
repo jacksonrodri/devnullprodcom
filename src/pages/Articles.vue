@@ -22,7 +22,9 @@
                 </b-button>
               </div>
             </div>
-            <div class="twitter-iframe d-flex align-items-center justify-content-center typography-h4 text-body">Twitter Iframe</div>
+            <div class="twitter-iframe align-items-center justify-content-center typography-h4 text-body">
+              <TwitterFeed />
+            </div>
           </div>
         </div>
       </div>
@@ -31,18 +33,22 @@
 </template>
 
 <script>
-import MainLayout from "@/components/layout/MainLayout"
-import ArticleItem from "@/components/article/ArticleItem"
+import MainLayout  from "@/components/layout/MainLayout"
+import ArticleItem from "@/components/ArticleItem"
+import TwitterFeed from "@/components/TwitterFeed"
 import HasPosts   from "@/mixins/HasPosts"
 
 export default {
   name: "Articles",
+
   mixins: [
     HasPosts
   ],
+
   components: {
     MainLayout,
-    ArticleItem
+    ArticleItem,
+    TwitterFeed
   }
 }
 </script>

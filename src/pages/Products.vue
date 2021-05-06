@@ -1,19 +1,19 @@
 <template>
-  <MainLayout section="product">
-    <div id="product">
+  <MainLayout section="products">
+    <div id="products">
       <div class="section">
         <div class="blue-gradient-dark"></div>
         <div class="section-wrapper">
-          <h2 class="typography-h2 text-white">some headline about product</h2>
+          <h2 class="typography-h2 text-white">Robust, Reliable, and Resilient</h2>
           <div class="section-container section-container-1 d-flex">
             <div class="filter-content">
-              <h4 class="typography-h4 mb-3">Blockchain Transaction Tracker</h4>
+              <h4 class="typography-h4 mb-3">Blockchain Tracker</h4>
               <p class="body-1 m-b-38">
-                Our transaction tracking suite (patent pending) is the perfect solution to receive email, text message, and webhook alerts on Blockchain activity with no fuss. <br /> <br />
+                Our transaction tracking suite (patent pending) is the perfect solution to receive email, text message, and API alerts upon Blockchain activity with no fuss. <br /> <br />
                 Simple select one of the many provided categories of transaction patterns to track and specify the parameters that matter to you (accounts, currencies, notification rate, and more). Blockchain Transaction Tracker will take care of the rest!
               </p>
-              <b-button class="normal-btn px-5 py-3 m-b-38 text-white learn-more" variant="primary">Learn more</b-button>
-              <p class="subtitle-2 mb-3">Who are using it</p>
+              <b-button class="normal-btn px-5 py-3 m-b-38 text-white learn-more" variant="primary" href="https://blocktr.ac">Learn more</b-button>
+              <p class="subtitle-2 mb-3">Who is using it</p>
               <p class="body-2 text-grey-4">
                 Institutional cryptocurrency custodians <br />
                 Retail / Ecommerce / Small & medium business who need alerts, notifications <br />
@@ -37,11 +37,11 @@
               <img src="@/assets/imgs/img-product-dei-chart.svg" />
             </div>
             <div class="chart-content">
-              <h4 class="typography-h4 mb-3">Decentralized Exchange Intelligence</h4>
+              <h4 class="typography-h4 mb-3">Decentralized Finance Intelligence</h4>
               <p class="body-1">
-                DEX Intelligence suite analyzes several major markets and delivers consistent, reliable stats.<br /><br />
+                Our DeFI Intelligence suite analyzes several major markets and delivers consistent, reliable stats.<br /><br />
                 Whether you are looking for insight into the liquidity present on the XRP ledger or the total trading volume being conducted in any given timeframe on XLM.<br /><br />
-                Perhaps you want to correlate completely disparate exchanges to discover arbitrage opportunities?<br /><br />
+                Perhaps you want to correlate completely disparate networks to discover arbitrage opportunities?<br /><br />
                 Some metrics that we provide:<br />
                 <ul>
                   <li><p>Issued Currencies with spreads and volume</p></li>
@@ -53,8 +53,8 @@
                 All statistics are available via our web based interface and API.
               </p>
               <p class="caption mb-4 text-grey-3">Additional data sources and metrics are available on demand</p>
-              <b-button class="normal-btn px-5 py-3 m-b-38 text-white learn-more" variant="primary">Learn more</b-button>
-              <p class="subtitle-2 mb-3">Who are using it</p>
+              <b-button class="normal-btn px-5 py-3 m-b-38 text-white learn-more" variant="primary" href="https://xrpintel.com">Learn more</b-button>
+              <p class="subtitle-2 mb-3">Who is using it</p>
               <p class="body-2 text-grey-4">
                 Market makers / traders <br />
                 Cryptocurrency analysts / traders
@@ -80,7 +80,7 @@
 import MainLayout from '@/components/layout/MainLayout'
 
 export default {
-  name: 'Product',
+  name: 'Products',
   components: {
     MainLayout,
   },
@@ -103,11 +103,11 @@ export default {
 
 <style scoped lang="scss">
 @import "@/scss/custom.scss";
-#product {
+#products {
   background: $grey-0;
 }
 
-#product .section {
+#products .section {
   padding-top: 314px;
   padding-bottom: 100px;
 
@@ -117,7 +117,7 @@ export default {
   }
 }
 
-#product .section-wrapper {
+#products .section-wrapper {
   max-width: 1150px;
   margin: 0 auto;
   padding-left: 32px;
@@ -140,6 +140,11 @@ export default {
       padding-right: 8px;
     }
   }
+}
+
+#products li p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .blue-gradient-dark {

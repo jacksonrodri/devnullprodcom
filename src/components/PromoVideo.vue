@@ -10,8 +10,7 @@
       <b-button
         variant="outline-light"
         class="normal-btn text-white px-4 px-md-5 py-3"
-        @click="index = 0"
-      >
+        @click="index = 0">
         watch demo
       </b-button>
     </div>
@@ -22,10 +21,12 @@
 import CoolLightBox from 'vue-cool-lightbox'
 import 'vue-cool-lightbox/dist/vue-cool-lightbox.min.css'
 export default {
-  name: 'LightBox',
+  name: 'PromoVideo',
+
   components: {
     CoolLightBox,
   },
+
   data: function () {
     return {
       items: [

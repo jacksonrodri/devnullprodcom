@@ -8,7 +8,7 @@
       </li>
 
       <li>
-        <router-link :class="{'text-white': !customNavbar, 'text-dark': customNavbar || isWhiteBG}" to="/our-product">
+        <router-link :class="{'text-white': !customNavbar, 'text-dark': customNavbar || isWhiteBG}" to="/products">
           Our Products
         </router-link>
       </li>
@@ -84,10 +84,6 @@ export default {
   padding-bottom: 20px;
 }
 
-#main_hamburger #products li{
-  font-size: 1.5rem;
-}
-
 #nav a{
   font-family: DM Sans;
   font-style: normal;
@@ -109,24 +105,5 @@ export default {
     width: 8px;
     height: 8px;
   }
-}
-</style>
-
-
-<style>
-#products .btn{
-  padding: 0;
-  padding-bottom: 5px;
-  background-color: unset;
-  border: none;
-  box-shadow: none;
-}
-
-#main_hamburger #products .btn{
-  font-size: 3rem;
-}
-
-#products a{
-  color: black !important;
 }
 </style>
