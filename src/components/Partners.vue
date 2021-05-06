@@ -1,14 +1,12 @@
 <template>
   <div class="position-relative px-3 px-sm-5">
     <VueSlickCarousel v-bind="settings" ref="carousel">
-      <div
-        class="carousel-item"
-        v-for="(item, index) in arr"
-        :key="index">
-        <div>
-        </div>
-      </div>
+      <img class="carousel-item"
+           v-for="partner in partners"
+           :key="partner"
+           :src="require('@/assets/partners/' + partner)"/>
     </VueSlickCarousel>
+
     <div>
       <img class="slick-icon slick-prev-icon" src="@/assets/imgs/arrow_backward.svg" @click="showNext" />
       <img class="slick-icon slick-next-icon" src="@/assets/imgs/arrow_forward.svg" @click="showNext" />
@@ -28,6 +26,8 @@
 
     data() {
       return {
+        partners: ["ripple.jpg", "stellar.png", "xrplf.png", "media4.png", "cybercede.png"],
+
         settings: {
           "dots": false,
           "focusOnSelect": true,
@@ -60,8 +60,7 @@
               }
             }
           ]
-        },
-        arr: [1, 2, 3, 4, 5, 6]
+        }
       }
     },
 
@@ -76,15 +75,14 @@
 <style scoped lang="scss">
 @import '@/scss/custom.scss';
 
-.carousel-item div {
-  background: $grey-1;
-  width: 191px;
-  height: 191px;
+.carousel-item {
+  max-width: 191px;
+  max-height: 191px;
   margin: 0 auto;
 
   @media screen and (max-width: 640px) {
-    width: 151px;
-    height: 151px;
+    max-width: 151px;
+    max-height: 151px;
   }
 }
 
@@ -118,5 +116,17 @@
 
 .slick-arrow {
   display: none;
+}
+</style>
+
+<style lang="scss">
+.slick-track{
+  display: flex !important;
+}
+
+.slick-slide{
+  display: flex !important;
+  justify-content: center;
+  margin: auto;
 }
 </style>
